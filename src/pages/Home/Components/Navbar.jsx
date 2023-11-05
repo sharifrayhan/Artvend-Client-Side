@@ -27,9 +27,9 @@ const Navbar = () => {
                         {/* Dropdown Content */}
                         {dropdownOpen && (
                             <div className="absolute w-[130px]  top-full mt-1 py-2 bg-white text-gray-800 shadow-md rounded-lg">
-                                <Link to="/dashboard-option1" className="block px-4 py-2 text-sm hover:bg-[#e27f5a]">My Services</Link>
-                                <Link to="/dashboard-option2" className="block px-4 py-2 text-sm hover:bg-[#e27f5a]">Add Services</Link>
-                                <Link to="/dashboard-option3" className="block px-4 py-2 text-sm hover:bg-[#e27f5a]">My Schedules</Link>
+                                <Link to="/dashboard-option1" className="block px-4 py-2 text-sm hover:bg-[#EF5C2B]">My Services</Link>
+                                <Link to="/dashboard-option2" className="block px-4 py-2 text-sm hover:bg-[#EF5C2B]">Add Services</Link>
+                                <Link to="/dashboard-option3" className="block px-4 py-2 text-sm hover:bg-[#EF5C2B]">My Schedules</Link>
                             </div>
                         )}
                     </div>

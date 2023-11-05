@@ -1,4 +1,4 @@
-import { Typewriter, Cursor , useTypewriter } from 'react-simple-typewriter'
+import { Cursor , useTypewriter } from 'react-simple-typewriter'
 
 const Banner = () => {
 
@@ -13,7 +13,7 @@ const Banner = () => {
                 <h1 className=" font-zolina text-2xl md:text-5xl lg:text-8xl mt-[80px] md:mt-[155px] lg:mt-[270px] "     data-aos="fade-down"
                 data-aos-easing="linear"
                 data-aos-duration="900">ARTVEND</h1>
-                <span className='text-[9px] md:text-sm lg:text-lg'>{text}<Cursor></Cursor></span>
+                <span className='text-[9px] text-[#EF5C2B] md:text-sm lg:text-lg'>{text}<Cursor></Cursor></span>
                 
             </div>
         </div>
