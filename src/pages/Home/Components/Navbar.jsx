@@ -15,21 +15,21 @@ const Navbar = () => {
                 <img className="h-12" src="https://i.ibb.co/ZX9hbLV/logo-main.png" alt="" />
             </div>
 
-            <div className="md:w-[58%] lg:w-[53%] flex items-center justify-between">
+            <div className="md:w-[58%]  lg:w-[53%] flex items-center justify-between">
                 {/* Three main components for  users */}
                 <div className="flex   gap-3 relative">
-                    <Link to="/home"><p>Home</p></Link>
-                    <Link to="/services"><p>Services</p></Link>
+                    <Link to="/home" className='hover:text-[#e27f5a]'>Home</Link>
+                    <Link to="/services"  className='hover:text-[#e27f5a]'>Services</Link>
 
                     {/* Dashboard Dropdown */}
                     <div className="relative" onClick={toggleDropdown}>
-                        <p className="cursor-pointer">Dashboard</p>
+                        <p className="cursor-pointer hover:text-[#e27f5a]">Dashboard</p>
                         {/* Dropdown Content */}
                         {dropdownOpen && (
                             <div className="absolute w-[130px]  top-full mt-1 py-2 bg-white text-gray-800 shadow-md rounded-lg">
-                                <Link to="/dashboard-option1" className="block px-4 py-2 text-sm hover:bg-gray-200">My Services</Link>
-                                <Link to="/dashboard-option2" className="block px-4 py-2 text-sm hover:bg-gray-200">Add Services</Link>
-                                <Link to="/dashboard-option3" className="block px-4 py-2 text-sm hover:bg-gray-200">My Schedules</Link>
+                                <Link to="/dashboard-option1" className="block px-4 py-2 text-sm hover:bg-[#e27f5a]">My Services</Link>
+                                <Link to="/dashboard-option2" className="block px-4 py-2 text-sm hover:bg-[#e27f5a]">Add Services</Link>
+                                <Link to="/dashboard-option3" className="block px-4 py-2 text-sm hover:bg-[#e27f5a]">My Schedules</Link>
                             </div>
                         )}
                     </div>

@@ -7,7 +7,18 @@ export default {
      ],
 
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        zolina: "zolina"
+      }
+    },
+    // screens: {
+    //   'sm': '320px',
+    //   'ssm': '375px',
+    //   'xsm': '425px',   
+    //   'lg': '1024px',  
+    //   'xl': '1280px',  
+    // },
   },
   plugins: [      require('preline/plugin'),
 ],

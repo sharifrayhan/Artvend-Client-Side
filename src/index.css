@@ -1,3 +1,8 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,3 +11,18 @@
   background-color: #f5efe7;
 }
 
+body{
+    
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+ 
+ }
+
+ @font-face {
+  font-family: zolina;
+  src: url(/public/Zolina\ Regular.ttf);
+ }
+
+ .zolina {
+  font-family: zolina;
+ }
