@@ -1,0 +1,414 @@
+[
+  {
+    "service_provider_name": "Aisha Mehmina Toya",
+    "service_provider_email": "aisha.m.toya@gmail.com",
+    "service_provider_image": "https://i.ibb.co/3cmRcRf/Aisha-Mehmina-Toya.jpg",
+    "service_location_area": "Khulna, Bangladesh",
+    "service_name": "Boho Art",
+    "service_description": "Expressing creativity through vibrant, eclectic boho art.",
+    "service_image": "https://i.ibb.co/TrRDSjX/Art-2.jpg",
+    "service_price": "$50"
+  },
+
+  {
+    "service_provider_name": "Aisha Mehmina Toya",
+    "service_provider_email": "aisha.m.toya@gmail.com",
+    "service_provider_image": "https://i.ibb.co/3cmRcRf/Aisha-Mehmina-Toya.jpg",
+    "service_location_area": "Khulna, Bangladesh",
+    "service_name": "Realistic Pencil Sketch",
+    "service_description": "Bringing life's moments to paper with realistic pencil art.",
+    "service_image": "https://i.ibb.co/mGvTc9M/Art-3.png",
+    "service_price": "$70"
+  },
+
+  {
+    "service_provider_name": "Aisha Mehmina Toya",
+    "service_provider_image": "https://i.ibb.co/3cmRcRf/Aisha-Mehmina-Toya.jpg",
+    "service_provider_email": "aisha.m.toya@gmail.com",
+    "service_location_area": "Khulna, Bangladesh",
+    "service_name": "Van Gogh Style Art",
+    "service_description": "Crafting expressive art with vibrant Van Gogh-inspired strokes.",
+    "service_image": "https://i.ibb.co/yFPbf1c/Art-3.jpg",
+    "service_price": "$60"
+  },
+
+  {
+    "service_provider_name": "Aisha Mehmina Toya",
+    "service_provider_email": "aisha.m.toya@gmail.com",
+    "service_provider_image": "https://i.ibb.co/3cmRcRf/Aisha-Mehmina-Toya.jpg",
+    "service_location_area": "Khulna, Bangladesh",
+    "service_name": "Cartoon Portraits",
+    "service_description": "Creating playful, charming cartoon characters through artistry.",
+    "service_image": "https://i.ibb.co/LNYfXNW/Art-1.jpg",
+    "service_price": "$80"
+  },
+
+  {
+    "service_provider_name": "Arabella Sophia Parker",
+    "service_provider_email": "arabella.s.parker@gmail.com",
+    "service_provider_image": "https://i.ibb.co/hDqXzCD/Arabella-Sophia-Parker.jpg",
+    "service_location_area": "Khulna, Bangladesh",
+    "service_name": "Movie Themed Candles",
+    "service_description": "Ignite cinematic ambiance with movie-themed candle art.",
+    "service_image": "https://i.ibb.co/HKLXBSM/Candle-Art-1.jpg",
+    "service_price": "$20"
+  },
+  {
+    "service_provider_name": "Arabella Sophia Parker",
+    "service_provider_email": "arabella.s.parker@gmail.com",
+    "service_provider_image": "https://i.ibb.co/hDqXzCD/Arabella-Sophia-Parker.jpg",
+    "service_location_area": "Khulna, Bangladesh",
+    "service_name": "Angelic Candles",
+    "service_description": "Illuminate tranquility with heavenly, angelic-inspired candle creations.",
+    "service_image": "https://i.ibb.co/35ZKfd2/Candle-Art-2.jpg",
+    "service_price": "$25"
+  },
+  {
+    "service_provider_name": "Arabella Sophia Parker",
+    "service_provider_email": "arabella.s.parker@gmail.com",
+    "service_provider_image": "https://i.ibb.co/hDqXzCD/Arabella-Sophia-Parker.jpg",
+    "service_location_area": "Khulna, Bangladesh",
+    "service_name": "Custom Art Candles",
+    "service_description": "Personalize your ambiance with uniquely crafted custom candle art.",
+    "service_image": "https://i.ibb.co/kDvPCp2/Candle-Art-3.jpg",
+    "service_price": "$30"
+  },
+  {
+    "service_provider_name": "Arabella Sophia Parker",
+    "service_provider_email": "arabella.s.parker@gmail.com",
+    "service_provider_image": "https://i.ibb.co/hDqXzCD/Arabella-Sophia-Parker.jpg",
+    "service_location_area": "Khulna, Bangladesh",
+    "service_name": "Leaf-Embedded Candles",
+    "service_description": "Illuminate with nature's beauty using candles adorned with real dried leaves, bringing an organic touch to your space.",
+    "service_image": "https://i.ibb.co/tL9TB3w/Candle-Art-4.jpg",
+    "service_price": "$35"
+  },
+
+  {
+    "service_provider_name": "Aurora Evengella Grace",
+    "service_provider_email": "aurora.e.grace@gmail.com",
+    "service_provider_image": "https://i.ibb.co/TRVRyBL/Aurora-Evengella-Grace.jpg",
+    "service_location_area": "Rajshahi,Bangladesh",
+    "service_name": "Song Name Patches",
+    "service_description": "Stitching melodies into art - song-inspired embroidered patches.",
+    "service_image": "https://i.ibb.co/P94HVrj/Embroidered-Patch-2.jpg",
+    "service_price": "$15"
+  },
+  {
+    "service_provider_name": "Aurora Evengella Grace",
+    "service_provider_email": "aurora.e.grace@gmail.com",
+    "service_provider_image": "https://i.ibb.co/TRVRyBL/Aurora-Evengella-Grace.jpg",
+    "service_location_area": "Rajshahi,Bangladesh",
+    "service_name": "Quote Patches",
+    "service_description": "Wearable wisdom - embroidered patches featuring inspiring quotes.",
+    "service_image": "https://i.ibb.co/xjjyF2Y/Embroidered-Patch-1.jpg",
+    "service_price": "$18"
+  },
+  {
+    "service_provider_name": "Aurora Evengella Grace",
+    "service_provider_email": "aurora.e.grace@gmail.com",
+    "service_provider_image": "https://i.ibb.co/TRVRyBL/Aurora-Evengella-Grace.jpg",
+    "service_location_area": "Rajshahi,Bangladesh",
+    "service_name": "Heart-Shaped Patches",
+    "service_description": "Wear your heart on your sleeve with adorable heart-shaped patches.",
+    "service_image": "https://i.ibb.co/YXDmpDv/Embroidered-Patch-3.jpg",
+    "service_price": "$20"
+  },
+  {
+    "service_provider_name": "Aurora Evengella Grace",
+    "service_provider_email": "aurora.e.grace@gmail.com",
+    "service_provider_image": "https://i.ibb.co/TRVRyBL/Aurora-Evengella-Grace.jpg",
+    "service_location_area": "Rajshahi,Bangladesh",
+    "service_name": "Custom Design Patches",
+    "service_description": "Crafting uniqueness - personalized embroidered patches tailored to your vision.",
+    "service_image": "https://i.ibb.co/CMTtYLj/Embroidered-Patch-4.jpg",
+    "service_price": "$22"
+  },
+
+  {
+    "service_provider_name": "Cassandra Phillips Parker",
+    "service_provider_email": "cassandra.p.parker@gmail.com",
+    "service_provider_image": "https://i.ibb.co/W5P2pNh/Cassandra-Phillips-Parker.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Soft Transparent Phone Cover Art",
+    "service_description": "Elegance meets protection - artistic designs on soft, transparent phone covers.",
+    "service_image": "https://i.ibb.co/12DDSJq/Phone-cover-1.jpg",
+    "service_price": "$30"
+  },
+  {
+    "service_provider_name": "Cassandra Phillips Parker",
+    "service_provider_email": "cassandra.p.parker@gmail.com",
+    "service_provider_image": "https://i.ibb.co/W5P2pNh/Cassandra-Phillips-Parker.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Hard Plastic Machine Print Covers",
+    "service_description": "Durable style - machine-printed designs on hard plastic phone covers.",
+    "service_image": "https://i.ibb.co/d634cpD/Phone-cover-2.jpg",
+    "service_price": "$25"
+  },
+  {
+    "service_provider_name": "Cassandra Phillips Parker",
+    "service_provider_email": "cassandra.p.parker@gmail.com",
+    "service_provider_image": "https://i.ibb.co/W5P2pNh/Cassandra-Phillips-Parker.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Custom Design Phone Covers",
+    "service_description": "Uniquely yours - personalized phone covers crafted to reflect your style.",
+    "service_image": "https://i.ibb.co/Bq9mP77/Phone-cover-4.jpg",
+    "service_price": "$35"
+  },
+  {
+    "service_provider_name": "Cassandra Phillips Parker",
+    "service_provider_email": "cassandra.p.parker@gmail.com",
+    "service_provider_image": "https://i.ibb.co/W5P2pNh/Cassandra-Phillips-Parker.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Moodboard Style Phone Covers",
+    "service_description": "Express your mood - eclectic designs inspired by mood boards on phone covers.",
+    "service_image": "https://i.ibb.co/s324nxT/Phone-cover-3.jpg",
+    "service_price": "$40"
+  },
+
+  {
+    "service_provider_name": "Sharif Rayhan Nafi",
+    "service_provider_email": "sharifrayhannafi@gmail.com",
+    "service_provider_image": "https://i.ibb.co/yY78KNj/Sharif-Rayhan-Nafi.jpg",
+    "service_location_area": "Khulna,Bangladesh",
+    "service_name": "Vintage Style Product Photography",
+    "service_description": "Revive nostalgia in product visuals with vintage-inspired photography.",
+    "service_image": "https://i.ibb.co/ZWTwhF7/Photography-2.jpg",
+    "service_price": "$80"
+  },
+  {
+    "service_provider_name": "Sharif Rayhan Nafi",
+    "service_provider_email": "sharifrayhannafi@gmail.com",
+    "service_provider_image": "https://i.ibb.co/yY78KNj/Sharif-Rayhan-Nafi.jpg",
+    "service_location_area": "Khulna,Bangladesh",
+    "service_name": "Aesthetic Product Photography",
+    "service_description": "Captivate with visually appealing product displays through aesthetic-focused photography.",
+    "service_image": "https://i.ibb.co/S3yqD66/Photography-1.jpg",
+    "service_price": "$90"
+  },
+  {
+    "service_provider_name": "Sharif Rayhan Nafi",
+    "service_provider_email": "sharifrayhannafi@gmail.com",
+    "service_provider_image": "https://i.ibb.co/yY78KNj/Sharif-Rayhan-Nafi.jpg",
+    "service_location_area": "Khulna,Bangladesh",
+    "service_name": "Customer Preference-Centric Photography",
+    "service_description": "Tailored product showcases based on customer desires - our personalized photography service.",
+    "service_image": "https://i.ibb.co/KjTLj3s/Photography-4.jpg",
+    "service_price": "$100"
+  },
+  {
+    "service_provider_name": "Sharif Rayhan Nafi",
+    "service_provider_email": "sharifrayhannafi@gmail.com",
+    "service_provider_image": "https://i.ibb.co/yY78KNj/Sharif-Rayhan-Nafi.jpg",
+    "service_location_area": "Khulna,Bangladesh",
+    "service_name": "Floral Product Photography",
+    "service_description": "Enhance products with natural beauty using floral-themed photography.",
+    "service_image": "https://i.ibb.co/yffnzR8/Photography-3.jpg",
+    "service_price": "$85"
+  },
+
+  {
+    "service_provider_name": "Frederick Dominion Maximilian",
+    "service_provider_email": "frederick.d.maximilian@gmail.com",
+    "service_provider_image": "https://i.ibb.co/d56dTMt/Frederick-Dominion-Maximilian.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Van Gogh Style Stone Art",
+    "service_description": "Transform stones into vibrant masterpieces with Van Gogh-inspired strokes.",
+    "service_image": "https://i.ibb.co/ZzHW44T/Stone-art-1-jpg.jpg",
+    "service_price": "$55"
+  },
+  {
+    "service_provider_name": "Frederick Dominion Maximilian",
+    "service_provider_email": "frederick.d.maximilian@gmail.com",
+    "service_provider_image": "https://i.ibb.co/d56dTMt/Frederick-Dominion-Maximilian.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Floral Stone Art",
+    "service_description": "Craft natural beauty on stones with delicate floral designs.",
+    "service_image": "https://i.ibb.co/FbhP6Vj/Stone-art-2.jpg",
+    "service_price": "$60"
+  },
+  {
+    "service_provider_name": "Frederick Dominion Maximilian",
+    "service_provider_email": "frederick.d.maximilian@gmail.com",
+    "service_provider_image": "https://i.ibb.co/d56dTMt/Frederick-Dominion-Maximilian.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Boho Stone Art",
+    "service_description": "Embrace free-spirited expression with bohemian-inspired art on stones.",
+    "service_image": "https://i.ibb.co/FDr7Vtz/Stone-art-3.jpg",
+    "service_price": "$50"
+  },
+  {
+    "service_provider_name": "Frederick Dominion Maximilian",
+    "service_provider_email": "frederick.d.maximilian@gmail.com",
+    "service_provider_image": "https://i.ibb.co/d56dTMt/Frederick-Dominion-Maximilian.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Custom Stone Art",
+    "service_description": "Personalize stones with unique, bespoke designs tailored to your vision.",
+    "service_image": "https://i.ibb.co/3rCdYNH/Stone-art-4.Person",
+    "service_price": "$65"
+  },
+
+  {
+    "service_provider_name": "Isabella Sophia Rose",
+    "service_provider_email": "isabella.s.rose@gmail.com",
+    "service_provider_image": "https://i.ibb.co/3pmsjbD/Isabella-Sophia-Rose.jpg",
+    "service_location_area": "Chittagong,Bangladesh",
+    "service_name": "Custom Pet Van Gogh Style",
+    "service_description": "Turn your beloved pet into a Van Gogh-inspired masterpiece on your t-shirt.",
+    "service_image": "https://i.ibb.co/W3JHLdf/Tshirt-Art-2.jpg",
+    "service_price": "$45"
+  },
+  {
+    "service_provider_name": "Isabella Sophia Rose",
+    "service_provider_email": "isabella.s.rose@gmail.com",
+    "service_provider_image": "https://i.ibb.co/3pmsjbD/Isabella-Sophia-Rose.jpg",
+    "service_location_area": "Chittagong,Bangladesh",
+    "service_name": "Van Gogh Style Fusion Art",
+    "service_description": "Express your uniqueness with a blend of Van Gogh-style art mixing random elements on your t-shirt.",
+    "service_image": "https://i.ibb.co/yPLnRx1/Tshirt-Art-1.jpg",
+    "service_price": "$40"
+  },
+  {
+    "service_provider_name": "Isabella Sophia Rose",
+    "service_provider_email": "isabella.s.rose@gmail.com",
+    "service_provider_image": "https://i.ibb.co/3pmsjbD/Isabella-Sophia-Rose.jpg",
+    "service_location_area": "Chittagong,Bangladesh",
+    "service_name": "Real Van Gogh Painting Shirts",
+    "service_description": "Wear timeless art – real Van Gogh paintings beautifully handcrafted on your t-shirt.",
+    "service_image": "https://i.ibb.co/7CzVFS9/Tshirt-Art-3.jpg",
+    "service_price": "$50"
+  },
+  {
+    "service_provider_name": "Isabella Sophia Rose",
+    "service_provider_email": "isabella.s.rose@gmail.com",
+    "service_provider_image": "https://i.ibb.co/3pmsjbD/Isabella-Sophia-Rose.jpg",
+    "service_location_area": "Chittagong,Bangladesh",
+    "service_name": "Tailored Van Gogh Style",
+    "service_description": "Let your imagination run wild! Any Van Gogh style, any way you want on your t-shirt.",
+    "service_image": "https://i.ibb.co/SRyRXBR/Tshirt-Art-4.jpg",
+    "service_price": "$55"
+  },
+
+  {
+    "service_provider_name": "Nathaniel B Theodore",
+    "service_provider_email": "nathaniel.b.theodore@gmail.com",
+    "service_provider_image": "https://i.ibb.co/F6sJPPR/Nathaniel-B-Theodore.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Custom Wall Art",
+    "service_description": "Personalize your space with unique, bespoke designs tailored for your walls.",
+    "service_image": "https://i.ibb.co/pdpvS2Q/Wall-art-4.jpg",
+    "service_price": "$75"
+  },
+  {
+    "service_provider_name": "Nathaniel B Theodore",
+    "service_provider_email": "nathaniel.b.theodore@gmail.com",
+    "service_provider_image": "https://i.ibb.co/F6sJPPR/Nathaniel-B-Theodore.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Small Shapes Wall Art",
+    "service_description": "Elevate your walls with intricate, small-shaped artistic arrangements.",
+    "service_image": "https://i.ibb.co/1T1wq6F/Wall-art-2.jpg",
+    "service_price": "$70"
+  },
+  {
+    "service_provider_name": "Nathaniel B Theodore",
+    "service_provider_email": "nathaniel.b.theodore@gmail.com",
+    "service_provider_image": "https://i.ibb.co/F6sJPPR/Nathaniel-B-Theodore.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Boho Wall Art",
+    "service_description": "Infuse free-spirited vibes with vibrant bohemian-inspired wall art.",
+    "service_image": "https://i.ibb.co/RypDNfH/Wall-art-3.jpg",
+    "service_price": "$65"
+  },
+  {
+    "service_provider_name": "Nathaniel B Theodore",
+    "service_provider_email": "nathaniel.b.theodore@gmail.com",
+    "service_provider_image": "https://i.ibb.co/F6sJPPR/Nathaniel-B-Theodore.jpg",
+    "service_location_area": "Dhaka,Bangladesh",
+    "service_name": "Modern Wall Art",
+    "service_description": "Transform your space with sleek and contemporary artistic statements for your walls.",
+    "service_image": "https://i.ibb.co/YfdBG4K/Wall-art-1.jpg",
+    "service_price": "$80"
+  },
+
+  {
+    "service_provider_name": "Sebastian Stan Alexander",
+    "service_provider_email": "sebastian.s.alexander@gmail.com",
+    "service_provider_image": "https://i.ibb.co/ggJXVH5/Sebastian-Stan-Alexander.jpg",
+    "service_location_area": "Chittagong,Bangladesh",
+    "service_name": "Halloween Themed Bookmarks",
+    "service_description": "Mark your pages with spooky charm - Halloween-themed wooden bookmarks.",
+    "service_image": "https://i.ibb.co/X8655Rv/Wooden-Bookmark-1.jpg",
+    "service_price": "$10"
+  },
+  {
+    "service_provider_name": "Sebastian Stan Alexander",
+    "service_provider_email": "sebastian.s.alexander@gmail.com",
+    "service_provider_image": "https://i.ibb.co/ggJXVH5/Sebastian-Stan-Alexander.jpg",
+    "service_location_area": "Chittagong,Bangladesh",
+    "service_name": "Boho Wooden Bookmarks",
+    "service_description": "Embrace free-spirited reading with bohemian-inspired wooden bookmarks.",
+    "service_image": "https://i.ibb.co/JkjWGtC/Wooden-Bookmark-4.jpg",
+    "service_price": "$8"
+  },
+  {
+    "service_provider_name": "Sebastian Stan Alexander",
+    "service_provider_email": "sebastian.s.alexander@gmail.com",
+    "service_provider_image": "https://i.ibb.co/ggJXVH5/Sebastian-Stan-Alexander.jpg",
+    "service_location_area": "Chittagong,Bangladesh",
+    "service_name": "Natural Wooden Bookmarks",
+    "service_description": "Connect with nature through simple and elegant wooden bookmarks.",
+    "service_image": "https://i.ibb.co/vLYqWxW/Wooden-Bookmark-3.jpg",
+    "service_price": "$7"
+  },
+  {
+    "service_provider_name": "Sebastian Stan Alexander",
+    "service_provider_email": "sebastian.s.alexander@gmail.com",
+    "service_provider_image": "https://i.ibb.co/ggJXVH5/Sebastian-Stan-Alexander.jpg",
+    "service_location_area": "Chittagong,Bangladesh",
+    "service_name": "Iconic Wooden Bookmarks",
+    "service_description": "Celebrate your favorite icons with themed, wooden bookmark designs.",
+    "service_image": "https://i.ibb.co/YRXnMQz/Wooden-Bookmark-2.jpg",
+    "service_price": "$6"
+  },
+
+  {
+    "service_provider_name": "Seraphina Maria Julie",
+    "service_provider_email": "seraphina.m.julie@gmail.com",
+    "service_provider_image": "https://i.ibb.co/cJ14cgV/Seraphina-Maria-Julie.jpg",
+    "service_location_area": "Khulna,Bangladesh",
+    "service_name": "Rounded Shaped Frames",
+    "service_description": "Add a touch of softness with rounded wooden frames, blending curves into your displayed memories.",
+    "service_image": "https://i.ibb.co/P6WxMK4/wooden-frame-1.jpg",
+    "service_price": "$30"
+  },
+  {
+    "service_provider_name": "Seraphina Maria Julie",
+    "service_provider_email": "seraphina.m.julie@gmail.com",
+    "service_provider_image": "https://i.ibb.co/cJ14cgV/Seraphina-Maria-Julie.jpg",
+    "service_location_area": "Khulna,Bangladesh",
+    "service_name": "Rectangle and Square Frames",
+    "service_description": "Classic and versatile, rectangle and square wooden frames elegantly showcase your moments.",
+    "service_image": "https://i.ibb.co/25FZ11p/wooden-frame-4.jpg",
+    "service_price": "$25"
+  },
+  {
+    "service_provider_name": "Seraphina Maria Julie",
+    "service_provider_email": "seraphina.m.julie@gmail.com",
+    "service_provider_image": "https://i.ibb.co/cJ14cgV/Seraphina-Maria-Julie.jpg",
+    "service_location_area": "Khulna,Bangladesh",
+    "service_name": "Door Style Frames",
+    "service_description": "Create a unique entry to your memories with door-style wooden frames for a distinctive display.",
+    "service_image": "https://i.ibb.co/QdYThXt/wooden-frame-2.jpg",
+    "service_price": "$35"
+  },
+  {
+    "service_provider_name": "Seraphina Maria Julie",
+    "service_provider_email": "seraphina.m.julie@gmail.com",
+    "service_provider_image": "https://i.ibb.co/cJ14cgV/Seraphina-Maria-Julie.jpg",
+    "service_location_area": "Khulna,Bangladesh",
+    "service_name": "Twisted Branches Style Frames",
+    "service_description": "Infuse nature's artistry with twisted branch-style wooden frames, adding organic elegance to your photographs.",
+    "service_image": "https://i.ibb.co/r57bdHr/wooden-frame-3.jpg",
+    "service_price": "$40"
+  }
+]

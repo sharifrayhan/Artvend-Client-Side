@@ -38,7 +38,7 @@ useEffect(()=>{
     )
 
 },[navigate])
-
+return axiosSecure;
 }
 
 export default useAxiosSecure;
