@@ -8,7 +8,17 @@ import Navbar from "../Home/Components/Navbar";
 const Services = () => {
 
     const [collections, setCollections] = useState([])
+    const [allCards, setAllCards] = useState([])
     const [cardsToShow, setCardsToShow] = useState(8);
+
+    const [searchCategory, setSearchCategory] = useState('');
+
+    useEffect(() => {
+        const filteredCards = allCards.filter(card =>
+            card.service_name.toLowerCase().includes(searchCategory.toLowerCase())
+        );
+        setCollections(filteredCards);
+    }, [allCards, searchCategory]);
 
     const handleShowAll = () => {
         setCardsToShow(collections.length);
@@ -20,7 +30,7 @@ const Services = () => {
     useEffect(()=>{
 
         axiosSecure.get(url)
-        .then(res => setCollections(res.data))
+        .then(res => setAllCards(res.data))
     
     },[url,axiosSecure])
 
@@ -46,6 +56,8 @@ const Services = () => {
                         type="text"
                         placeholder="Search..."
                         autoComplete="off"
+                     
+                        onChange={(e) => setSearchCategory(e.target.value)}
                     />
                 </div>
             </div>
