@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../../Axios/useAxiosSecure";
 import FeaturedCard from "./FeaturedCard";
+import { Link } from "react-router-dom";
 
 
 
@@ -53,7 +54,7 @@ const Featured = () => {
             </div>
 
             <center>
-                <button className="bg-red-500 my-3  hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Show All</button>
+                <Link to='/Services'><button className="bg-red-500 my-3  hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Show All</button></Link>
             </center>
 
         </div>

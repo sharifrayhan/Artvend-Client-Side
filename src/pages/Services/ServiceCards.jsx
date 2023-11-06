@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 
-
-const FeaturedCard = ({collection}) => {
+const ServiceCards = ({collection}) => {
     return (
-        <div className=" flex flex-col items-center">
+<div className=" flex flex-col items-center">
             <img className="z-0 h-[300px] rounded-2xl" src={collection?.service_image} alt="" />
-           <div className=" p-3 bg-[#D7CBA3] w-[270px] rounded-2xl -mt-16 z-10 sticky">
+           <div className=" pt-3 px-3 pb-4 bg-[#D7CBA3] flex flex-col justify-between w-[270px] h-[220px] rounded-2xl -mt-16 z-10 sticky">
                 <div className="mb-1">
                     <center className=" font-zolina mb-1 font-semibold">{collection?.service_name}</center>
-                    <p className="line-clamp-2 px-2 italic text-[15px]">{collection?.service_description}</p>
+                    <center className=" text-sm">{collection?.service_location_area}</center>
+                    <p className=" px-2 italic mt-2 text-[14px]">{collection?.service_description}</p>
                 </div>
                 <div className="px-2 gap-3 flex items-center ">
                         <div className=" flex items-start gap-2">
@@ -28,4 +28,4 @@ const FeaturedCard = ({collection}) => {
     );
 };
 
-export default FeaturedCard;
+export default ServiceCards;
