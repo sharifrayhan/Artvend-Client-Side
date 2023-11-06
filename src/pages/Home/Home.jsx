@@ -5,7 +5,7 @@ import Navbar from "./Components/Navbar";
 
 const Home = () => {
     return (
-        <div>
+        <div className=" max-w-8xl">
      
             <Navbar></Navbar>
             <Banner></Banner>

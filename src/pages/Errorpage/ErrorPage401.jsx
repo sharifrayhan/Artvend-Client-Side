@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-const ErrorPage = () => {
+const ErrorPage401 = () => {
     return (
       <div className=" h-screen flex flex-col items-center gap-3">
         <img 
           className=" h-[500px] "
-          src="https://i.ibb.co/WkYQMQr/404-page.png"
+          src="https://i.ibb.co/Bz0nTX0/401-unauthorized.png"
           alt=""
         />
  <Link to="/">
@@ -20,4 +20,4 @@ const ErrorPage = () => {
     );
   };
   
-  export default ErrorPage;
+  export default ErrorPage401;

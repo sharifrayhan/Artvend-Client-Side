@@ -18,7 +18,7 @@ const Navbar = () => {
             <div className="md:w-[58%]  lg:w-[53%] flex items-center justify-between">
                 {/* Three main components for  users */}
                 <div className="flex   gap-3 relative">
-                    <Link to="/home" className='hover:text-[#e27f5a]'>Home</Link>
+                    <Link to="/" className='hover:text-[#e27f5a]'>Home</Link>
                     <Link to="/services"  className='hover:text-[#e27f5a]'>Services</Link>
 
                     {/* Dashboard Dropdown */}
