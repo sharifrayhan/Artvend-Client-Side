@@ -3,8 +3,6 @@ import useAxiosSecure from "../../Axios/useAxiosSecure";
 import ServiceCards from "./ServiceCards";
 import Navbar from "../Home/Components/Navbar";
 
-
-
 const Services = () => {
 
     const [collections, setCollections] = useState([])
@@ -54,9 +52,8 @@ const Services = () => {
                     <input
                         className="w-full py-2 pl-10 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-gray-400 focus:bg-white"
                         type="text"
-                        placeholder="Search..."
+                        placeholder="Search by name..."
                         autoComplete="off"
-                     
                         onChange={(e) => setSearchCategory(e.target.value)}
                     />
                 </div>

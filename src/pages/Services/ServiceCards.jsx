@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ServiceCards = ({collection}) => {
     return (
-<div className=" flex flex-col items-center">
+    <div className=" flex flex-col items-center">
             <img className="z-0 h-[300px] rounded-2xl" src={collection?.service_image} alt="" />
            <div className=" pt-3 px-3 pb-4 bg-[#D7CBA3] flex flex-col justify-between w-[270px] h-[220px] rounded-2xl -mt-16 z-10 sticky">
                 <div className="mb-1">

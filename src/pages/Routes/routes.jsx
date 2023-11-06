@@ -9,6 +9,7 @@ import Register from "../Register/Register";
 import Services from "../Services/Services";
 import ErrorPage401 from "../Errorpage/ErrorPage401";
 import ErrorPage403 from "../Errorpage/ErrorPage403";
+import MyServices from "../My Services/MyServices";
 
   
   const router = createBrowserRouter([
@@ -40,6 +41,10 @@ import ErrorPage403 from "../Errorpage/ErrorPage403";
         {
           path: "/Services",
           element: <Services></Services>,
+        },
+        {
+          path: "/MyServices",
+          element: <MyServices></MyServices>,
         },
       ],
     }, 
