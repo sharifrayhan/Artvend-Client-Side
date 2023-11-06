@@ -10,6 +10,7 @@ import Services from "../Services/Services";
 import ErrorPage401 from "../Errorpage/ErrorPage401";
 import ErrorPage403 from "../Errorpage/ErrorPage403";
 import MyServices from "../My Services/MyServices";
+import Details from "../Details/Details";
 
   
   const router = createBrowserRouter([
@@ -45,6 +46,10 @@ import MyServices from "../My Services/MyServices";
         {
           path: "/MyServices",
           element: <MyServices></MyServices>,
+        },
+        {
+          path: "/Details/:id",
+          element: <Details></Details>,
         },
       ],
     }, 
