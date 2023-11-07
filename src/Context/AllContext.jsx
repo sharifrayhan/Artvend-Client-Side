@@ -13,6 +13,7 @@ const AllContext = ({children}) => {
     const [registerError, setRegisterError] = useState('')
     const [termsError, setTermsError] = useState('')
     const [user, setUser] = useState(null)
+    const [loading, setLoading] = useState(true)
 
 
 // import and create google auth provider
@@ -40,7 +41,7 @@ const handleGoogleSignIn = (navigate,location) => {
 
   // import and create register user
   const createUser = (email,password) => {
-
+    setLoading(true)
     return createUserWithEmailAndPassword(auth, email, password)
 }
 
@@ -98,7 +99,7 @@ const handleRegister = (e, navigate) => {
 
 // import and create sign in method
 const signIn = (email,password) => {
-
+    setLoading(true)
     return signInWithEmailAndPassword(auth, email, password)
 }
 
@@ -132,6 +133,7 @@ const handleLogin = (e, navigate, location) => {
     const unSubscribe = onAuthStateChanged(auth, currentUser=>{
         console.log(' on auth state activity', currentUser);
         setUser(currentUser)
+        setLoading(false)
     });
     return () =>{
         unSubscribe();
