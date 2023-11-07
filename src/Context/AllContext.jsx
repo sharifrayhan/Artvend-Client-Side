@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 import app from '../Firebase/firebase.config'
-import { createUserWithEmailAndPassword, getAuth , GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword,  signInWithPopup, updateProfile } from "firebase/auth"
+import { createUserWithEmailAndPassword, getAuth , GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword,  signInWithPopup, signOut, updateProfile } from "firebase/auth"
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -15,6 +15,12 @@ const AllContext = ({children}) => {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
+
+    if (loading){
+        <div>
+            <img src="https://i.ibb.co/1fKG6Yb/loading.gif" alt="" />
+        </div>
+    }
 
 // import and create google auth provider
     const googleProvider = new GoogleAuthProvider()
@@ -89,7 +95,7 @@ const handleRegister = (e, navigate) => {
       })
 
       navigate('/Login')
-      
+      logOut()
   })
   .catch(error=>{
       console.error(error)
@@ -97,13 +103,13 @@ const handleRegister = (e, navigate) => {
   })
 }
 
-// import and create sign in method
+// create sign in method
 const signIn = (email,password) => {
     setLoading(true)
     return signInWithEmailAndPassword(auth, email, password)
 }
 
-// Handle sign in user
+// user sign in handle
 
 const handleLogin = (e, navigate, location) => {
     e.preventDefault();
@@ -128,6 +134,13 @@ const handleLogin = (e, navigate, location) => {
     }
   };
 
+
+  // create log out method
+    
+  const logOut = () => {
+    return signOut(auth);
+}
+
   
  useEffect(()=>{
     const unSubscribe = onAuthStateChanged(auth, currentUser=>{
@@ -144,7 +157,8 @@ const handleLogin = (e, navigate, location) => {
         handleGoogleSignIn,
         handleRegister,
         registerError,
-        handleLogin
+        handleLogin,
+        logOut
     }
 
     return (
