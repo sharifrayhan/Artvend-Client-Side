@@ -21,7 +21,7 @@ export default {
     //   'xl': '1280px',  
     // },
   },
-  plugins: [      require('preline/plugin'),
+  plugins: [require('preline/plugin'),
 ],
 }
 
