@@ -5,7 +5,7 @@ import { Context } from "../../Context/AllContext";
 
 const Login = () => {
 
-  const  {handleGoogleSignIn} = useContext(Context)
+  const  {handleGoogleSignIn, handleLogin} = useContext(Context)
 
 console.log(handleGoogleSignIn)
 
@@ -17,10 +17,10 @@ console.log(handleGoogleSignIn)
         <Navbar></Navbar>
     <div className="flex flex-col items-center h-screen ">
      
-     <form className="bg-[#ECD6BD] glass shadow-md mt-12 rounded px-8 pt-6 pb-8 mb-4 w-64">
+     <form  onSubmit={(e) => handleLogin(e, navigate, location)} className="bg-[#ECD6BD] glass shadow-md mt-12 rounded px-8 pt-6 pb-8 mb-4 w-64">
        
        <center>
-           <h1 className=" text-xl mb-2">LOGIN</h1>
+           <h1 className=" my-3 text-[#a55e3f] font-garamond text-2xl uppercase">LOGIN</h1>
        </center>
        
        <div className="mb-4">
