@@ -1,6 +1,8 @@
 
+
 import Banner from "./Components/Banner";
 import Featured from "./Components/Featured";
+import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Overview from "./Components/Overview";
 
@@ -13,6 +15,7 @@ const Home = () => {
             <Banner></Banner>
             <Featured></Featured>
             <Overview></Overview>
+            <Footer></Footer>
         </div>
     );
 };
