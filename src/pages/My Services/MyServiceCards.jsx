@@ -6,7 +6,7 @@ const MyServiceCards = ({filteredCard}) => {
         <img className="z-0 h-[300px] rounded-2xl" src={filteredCard?.service_image} alt="" />
        <div className=" pt-3 px-3 pb-4 bg-[#D7CBA3] flex flex-col justify-between w-[270px] h-[220px] rounded-2xl -mt-16 z-10 sticky">
             <div className="mb-1">
-                <center className=" font-zolina mb-1 font-semibold">{filteredCard?.service_name}</center>
+                <center className=" text-[20px] font-garamond mb-1 font-semibold">{filteredCard?.service_name}</center>
                 <center className=" text-sm">{filteredCard?.service_location_area}</center>
                 <p className=" px-2 italic mt-2 text-[14px]">{filteredCard?.service_description}</p>
             </div>
@@ -18,7 +18,7 @@ const MyServiceCards = ({filteredCard}) => {
                     <div className=" w-[100px] gap-1 flex items-center">
                        
                         <button className=" text-[14px] text-white text-sm flex py-1 px-2 items-center justify-center rounded-md  border-[0.1px] border-white">{filteredCard?.service_price}</button>
-                        <Link >
+                        <Link to={`/Details/${filteredCard?._id}`}>
                         <button className=" text-[14px] w-8 text-white text-sm flex py-[6px] px-1 items-center justify-center rounded-md  border-[0.1px] border-white"><img className="h-4" src="https://i.ibb.co/8MYwD5Q/right.png" alt="" /></button>
                         </Link>
                     </div>

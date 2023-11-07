@@ -9,7 +9,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        zolina: "zolina"
+        zolina: "zolina",
+        garamond: 'EB Garamond',
       }
     },
     // screens: {

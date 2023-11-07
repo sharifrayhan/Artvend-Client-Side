@@ -5,10 +5,10 @@ const FeaturedCard = ({collection}) => {
     return (
         <div className=" flex flex-col items-center">
             <img className="z-0 h-[300px] rounded-2xl" src={collection?.service_image} alt="" />
-           <div className=" p-3 bg-[#D7CBA3] flex flex-col justify-between w-[270px] min-h-[180px] rounded-2xl -mt-16 z-10 sticky">
+           <div className=" p-3 bg-[#D7CBA3] flex flex-col justify-between w-[270px] min-h-[160px] rounded-2xl -mt-16 z-10 sticky">
                 <div className="mb-1">
-                    <center className=" font-zolina mb-1 font-semibold">{collection?.service_name}</center>
-                    <p className="line-clamp-2 px-2 italic text-[15px]">{collection?.service_description}</p>
+                    <center className=" text-[20px] font-garamond mb-1 font-semibold">{collection?.service_name}</center>
+                    <p className="line-clamp-2 px-2 italic text-center text-[15px]">{collection?.service_description}</p>
                 </div>
                 <div className="px-2 gap-3 flex items-center ">
                         <div className=" flex items-start gap-2">

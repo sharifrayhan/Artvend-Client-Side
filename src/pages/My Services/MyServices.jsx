@@ -32,7 +32,7 @@ const MyServices = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <center>My Services</center>
+            <center className=" my-3 text-[#a55e3f] font-garamond text-2xl uppercase">My Services</center>
             <div className=" flex gap-3 flex-wrap items-center justify-center">
             {
                 filteredCards.map(filteredCard => (

@@ -59,7 +59,7 @@ const Details = () => {
             <div className="flex items-center justify-center">
                 <div className="flex flex-col min-h-screen gap-2">
 
-                        <img className=" h-[500px] rounded-tr-[70px] rounded-tl-[5px] rounded-b-[5px]" src={filteredCard?.service_image} alt="" />
+                        <img className=" h-[300px] md:h-[500px] lg:h-[500px] rounded-tr-[70px] rounded-tl-[5px] rounded-b-[5px]" src={filteredCard?.service_image} alt="" />
 
                         <div className=" p-3 bg-[#D7CBA3] mb-10 max-h-[800px] max-w-[530px] rounded-b-[5px] rounded-t-[5px]">
                             
@@ -79,7 +79,7 @@ const Details = () => {
                             
                             
                             <div className="">
-                                <center className=" font-zolina mb-1 font-semibold">{filteredCard?.service_name}</center>
+                                <center className=" text-[20px] font-garamond mb-1 font-semibold">{filteredCard?.service_name}</center>
                                 <p className="text-center px-2 italic text-[15px]">{filteredCard?.service_description}</p>
                             </div>
 
@@ -95,7 +95,7 @@ const Details = () => {
             </div>
 {/* Other Services By This Provider */}
             <div>
-                <center>Other Services From {filteredCard?.service_provider_name} </center>
+                <center className="my-3 text-[#a55e3f] font-garamond uppercase font-semibold text-xl">Other Services From {filteredCard?.service_provider_name} </center>
             <div className=" flex flex-wrap gap-3 items-center justify-center">
                 {
                     otherCards.map((otherCard)=>(
@@ -106,8 +106,8 @@ const Details = () => {
                             <img className="z-0 h-[300px] rounded-2xl" src={otherCard?.service_image} alt="" />
                             <div className=" p-3 bg-[#D7CBA3] flex flex-col justify-between w-[270px] min-h-[180px] rounded-2xl -mt-16 z-10 sticky">
                                 <div className="mb-1">
-                                    <center className=" font-zolina mb-1 font-semibold">{otherCard?.service_name}</center>
-                                    <p className="line-clamp-2 px-2 italic text-[15px]">{otherCard?.service_description}</p>
+                                    <center className=" text-[20px] font-garamond mb-1 font-semibold">{otherCard?.service_name}</center>
+                                    <p className="line-clamp-2 px-2 text-center italic text-[15px]">{otherCard?.service_description}</p>
                                 </div>
                                 <div className="px-2 gap-3 flex items-center ">
                                         <div className=" flex items-start gap-2">

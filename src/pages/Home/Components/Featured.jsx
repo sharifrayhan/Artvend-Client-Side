@@ -42,7 +42,7 @@ const Featured = () => {
         <div className=" ">
             
             <center>
-                <h1 className=" mb-6 font-zolina font-semibold text-3xl">Popular Services</h1>
+                <h1 className=" mb-6 text-[#a55e3f] font-garamond uppercase font-semibold text-3xl">Popular Services</h1>
             </center>
 
             <div className="flex flex-wrap gap-3 items-center justify-center">

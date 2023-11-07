@@ -37,7 +37,7 @@ const Services = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <center>All Services</center>
+            <center className=" my-3 text-[#a55e3f] font-garamond text-2xl ">ALL SERVICES</center>
 
             {/* Search field */}
             <div className="max-w-xs mx-auto">
