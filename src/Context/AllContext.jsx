@@ -4,6 +4,9 @@ import { createUserWithEmailAndPassword, getAuth , GoogleAuthProvider, onAuthSta
 import { useState } from 'react';
 import { useEffect } from 'react';
 import Swal from 'sweetalert2'
+import axios from "axios";
+// import useAxiosSecure from '../Axios/useAxiosSecure';
+
 
 export const Context = createContext(null)
 const auth = getAuth(app)
@@ -12,22 +15,24 @@ console.log(auth)
 const AllContext = ({children}) => {
 
     const [registerError, setRegisterError] = useState('')
-    const [loginError, setLoginError] = useState('')
+    // const axiosSecure = useAxiosSecure()
     const [termsError, setTermsError] = useState('')
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
 
 
-    if (loading){
-        <div>
-            <img src="https://i.ibb.co/1fKG6Yb/loading.gif" alt="" />
-        </div>
+    if (loading) {
+        
+          
+                <img className=' h-screen w-screen' src="https://i.ibb.co/1fKG6Yb/loading.gif" alt="" />
+          
+  
     }
 
 
    const onSuccessfullRegistration = () =>{
     Swal.fire({
-        position: 'top-center',
+        position: 'center',
         icon: 'success',
         title: 'Registration Successfull, Please Login to continue',
         showConfirmButton: false,
@@ -37,9 +42,9 @@ const AllContext = ({children}) => {
 
    const onRegistrationError = () =>{
     Swal.fire({
-        position: 'top-center',
+        position: 'center',
         icon: 'error',
-        title: `${registerError}`,
+        title: "Error Registering User",
         showConfirmButton: false,
         timer: 1500
       })
@@ -47,7 +52,7 @@ const AllContext = ({children}) => {
 
    const onSuccessfullLogin = () =>{
     Swal.fire({
-        position: 'top-center',
+        position: 'center',
         icon: 'success',
         title: 'Successfully logged in',
         showConfirmButton: false,
@@ -57,9 +62,9 @@ const AllContext = ({children}) => {
 
    const onLoginError = () =>{
     Swal.fire({
-        position: 'top-center',
+        position: 'center',
         icon: 'error',
-        title: `${loginError}`,
+        title: "Login Error",
         showConfirmButton: false,
         timer: 1500
       })
@@ -76,15 +81,17 @@ const AllContext = ({children}) => {
     }
 
 // Handle google sign in user
-const handleGoogleSignIn = (navigate,location) => {
+const handleGoogleSignIn = ( location, navigate) => {
     googleSignIn()
       .then((result) => {
         console.log(result.user);
-        result.getStatusCode()
         navigate(location?.state ? location.state : "/");
+        onSuccessfullLogin()
+        
       })
       .catch((error) => {
         console.error(error);
+        onLoginError()
        
       });
   };
@@ -156,7 +163,7 @@ const signIn = (email,password) => {
 
 // user sign in handle
 
-const handleLogin = (e, navigate, location) => {
+const handleLogin = (e, location, navigate) => {
     e.preventDefault();
   
     const form = new FormData(e.currentTarget);
@@ -169,12 +176,11 @@ const handleLogin = (e, navigate, location) => {
       signIn(email, password, navigate, location)
         .then(result => {
           console.log(result.user);
-          onSuccessfullLogin()
           navigate(location?.state ? location.state : "/");
+          onSuccessfullLogin()
         })
         .catch(error => {
-          console.error(error.code);
-          setLoginError(error.code)
+          console.error(error);
           onLoginError()
         });
     }
@@ -190,7 +196,6 @@ const handleLogin = (e, navigate, location) => {
 const handleLogOut = () => {
     logOut();
     setRegisterError('')
-    setLoginError('')
     setTermsError('')
   };
 
@@ -198,8 +203,25 @@ const handleLogOut = () => {
  useEffect(()=>{
     const unSubscribe = onAuthStateChanged(auth, currentUser=>{
         console.log(' on auth state activity', currentUser);
+        const userEmail = currentUser?.email || user?.email;
         setUser(currentUser)
         setLoading(false)
+        // const url = 'http://localhost:3000/jwt'
+        if(currentUser){
+            const loggeduserinfo = {email: userEmail}
+            console.log(loggeduserinfo)
+            axios.post('http://localhost:3000/jwt',loggeduserinfo,{withCredentials: true})
+            .then(res=>{
+                console.log(res.data)
+            })
+        }
+        else{
+            const loggeduserinfo = {email: userEmail}
+            axios.post('http://localhost:3000/logout',loggeduserinfo,{withCredentials: true} )
+            .then(res=>{
+                console.log(res.data)
+            })
+        }
     });
     return () =>{
         unSubscribe();

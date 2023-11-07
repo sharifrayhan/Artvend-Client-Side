@@ -19,7 +19,7 @@ const Featured = () => {
     
     },[url,axiosSecure])
 
-    console.log(collections)
+    // console.log(collections)
 
     useEffect(()=>{
 
@@ -36,7 +36,7 @@ const Featured = () => {
 
     },[collections])
 
-    console.log(filteredCollections)
+    // console.log(filteredCollections)
 
     return (
         <div className=" ">

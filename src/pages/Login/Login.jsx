@@ -14,7 +14,7 @@ const Login = () => {
         <Navbar></Navbar>
     <div className="flex flex-col items-center h-screen ">
     <div className="bg-[#ECD6BD] glass shadow-md mt-12 rounded px-8 pt-6 pb-8 mb-4 w-64">
-     <form  onSubmit={(e) => handleLogin(e, navigate, location)} >
+     <form  onSubmit={(e) => handleLogin(e, location, navigate)} >
        
        <center>
            <h1 className=" my-3 text-[#a55e3f] font-garamond text-2xl uppercase">LOGIN</h1>
@@ -56,7 +56,7 @@ const Login = () => {
 
      <center>
             <button
-            onClick={()=>handleGoogleSignIn(location,navigate)}
+            onClick={()=>handleGoogleSignIn( location, navigate)}
             className=" text-white text-sm flex my-2 py-2 px-3 items-center justify-center rounded-md  border-[0.1px] border-white"
             >
             <img

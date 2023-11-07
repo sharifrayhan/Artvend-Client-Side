@@ -9,7 +9,7 @@ const Navbar = () => {
 
     const userName = user?.displayName;
     const userPhoto = user?.photoURL;
-    console.log(userPhoto)
+
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
