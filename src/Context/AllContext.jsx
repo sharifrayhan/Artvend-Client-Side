@@ -1,7 +1,8 @@
 import { createContext } from 'react';
 import app from '../Firebase/firebase.config'
-import { createUserWithEmailAndPassword, getAuth , GoogleAuthProvider, signInWithEmailAndPassword,  signInWithPopup, updateProfile } from "firebase/auth"
+import { createUserWithEmailAndPassword, getAuth , GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword,  signInWithPopup, updateProfile } from "firebase/auth"
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 export const Context = createContext(null)
 const auth = getAuth(app)
@@ -11,6 +12,7 @@ const AllContext = ({children}) => {
 
     const [registerError, setRegisterError] = useState('')
     const [termsError, setTermsError] = useState('')
+    const [user, setUser] = useState(null)
 
 
 // import and create google auth provider
@@ -124,6 +126,17 @@ const handleLogin = (e, navigate, location) => {
         });
     }
   };
+
+  
+ useEffect(()=>{
+    const unSubscribe = onAuthStateChanged(auth, currentUser=>{
+        console.log(' on auth state activity', currentUser);
+        setUser(currentUser)
+    });
+    return () =>{
+        unSubscribe();
+    }
+},[])
 
     const send = {
         handleGoogleSignIn,
