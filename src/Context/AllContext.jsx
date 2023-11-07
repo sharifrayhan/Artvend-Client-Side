@@ -3,6 +3,7 @@ import app from '../Firebase/firebase.config'
 import { createUserWithEmailAndPassword, getAuth , GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword,  signInWithPopup, signOut, updateProfile } from "firebase/auth"
 import { useState } from 'react';
 import { useEffect } from 'react';
+import Swal from 'sweetalert2'
 
 export const Context = createContext(null)
 const auth = getAuth(app)
@@ -11,6 +12,7 @@ console.log(auth)
 const AllContext = ({children}) => {
 
     const [registerError, setRegisterError] = useState('')
+    const [loginError, setLoginError] = useState('')
     const [termsError, setTermsError] = useState('')
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -21,6 +23,48 @@ const AllContext = ({children}) => {
             <img src="https://i.ibb.co/1fKG6Yb/loading.gif" alt="" />
         </div>
     }
+
+
+   const onSuccessfullRegistration = () =>{
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Registration Successfull, Please Login to continue',
+        showConfirmButton: false,
+        timer: 1500
+      })
+   }
+
+   const onRegistrationError = () =>{
+    Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        title: `${registerError}`,
+        showConfirmButton: false,
+        timer: 1500
+      })
+   }
+
+   const onSuccessfullLogin = () =>{
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Successfully logged in',
+        showConfirmButton: false,
+        timer: 1500
+      })
+   }
+
+   const onLoginError = () =>{
+    Swal.fire({
+        position: 'top-center',
+        icon: 'error',
+        title: `${loginError}`,
+        showConfirmButton: false,
+        timer: 1500
+      })
+   }
+
 
 // import and create google auth provider
     const googleProvider = new GoogleAuthProvider()
@@ -93,13 +137,14 @@ const handleRegister = (e, navigate) => {
         displayName: name,
         photoURL: url,
       })
-
+      onSuccessfullRegistration()
       navigate('/Login')
       logOut()
   })
   .catch(error=>{
       console.error(error)
       setRegisterError(error.message)
+      onRegistrationError()
   })
 }
 
@@ -124,12 +169,13 @@ const handleLogin = (e, navigate, location) => {
       signIn(email, password, navigate, location)
         .then(result => {
           console.log(result.user);
-
+          onSuccessfullLogin()
           navigate(location?.state ? location.state : "/");
         })
         .catch(error => {
           console.error(error.code);
-
+          setLoginError(error.code)
+          onLoginError()
         });
     }
   };
@@ -140,6 +186,13 @@ const handleLogin = (e, navigate, location) => {
   const logOut = () => {
     return signOut(auth);
 }
+
+const handleLogOut = () => {
+    logOut();
+    setRegisterError('')
+    setLoginError('')
+    setTermsError('')
+  };
 
   
  useEffect(()=>{
@@ -158,7 +211,10 @@ const handleLogin = (e, navigate, location) => {
         handleRegister,
         registerError,
         handleLogin,
-        logOut
+        logOut,
+        handleLogOut,
+        user,
+        termsError
     }
 
     return (

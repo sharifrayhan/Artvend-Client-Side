@@ -1,8 +1,15 @@
+import { useContext } from 'react';
 import { useState } from 'react'; 
 import { Link } from 'react-router-dom';
+import { Context } from '../../../Context/AllContext';
 
 const Navbar = () => {
     const [dropdownOpen, setDropdownOpen] = useState(false); 
+    const { user, handleLogOut } = useContext(Context);
+
+    const userName = user?.displayName;
+    const userPhoto = user?.photoURL;
+    console.log(userPhoto)
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
@@ -43,9 +50,30 @@ const Navbar = () => {
 
             {/* Login/Logout and user information */}
             <div className="flex gap-3">
-                <button>photo</button>
-                <h1>Sharif Rayhan</h1>
-                <button>Login</button>
+            {user && userName && userPhoto && (
+            <div className=" md:flex lg:flex items-center gap-2 px-1 hidden lg:px-3 p-1 rounded-md">
+              <img
+                className=" w-5 h-5 md:w-8 md:h-8 lg:w-9 lg:h-9 rounded-full "
+                src={userPhoto}
+                alt=""
+              />
+              <h1 className="text-[#162028] text-sm">{userName}</h1>
+            </div>
+          )}
+            {user ? (
+              <button
+                onClick={handleLogOut}
+                className="py-1 md:py-3 lg:py-3 px-1 md:px-4 lg:px-4 text-xs md:text-sm lg:text-sm glass rounded-md hover:bg-gradient-to-r from-[#06beb6]  to-[#48b1bf] text-[#162028]"
+              >
+                Log Out
+              </button>
+            ) : (
+              <Link to="/Login">
+                <button className="py-1 md:py-3 lg:py-3 px-1 md:px-4 lg:px-4 text-xs md:text-sm lg:text-sm glass rounded-md hover:bg-gradient-to-r from-[#06beb6]  to-[#48b1bf] text-[#162028]">
+                  Log In
+                </button>
+              </Link>
+            )}
             </div>
         </div>
     );
