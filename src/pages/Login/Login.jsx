@@ -1,7 +1,17 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Home/Components/Navbar";
+import { useContext } from "react";
+import { Context } from "../../Context/AllContext";
 
 const Login = () => {
+
+  const  {handleGoogleSignIn} = useContext(Context)
+
+console.log(handleGoogleSignIn)
+
+  const location = useLocation();
+  const navigate = useNavigate();
+
   return (
     <div className="bg-[url(https://i.ibb.co/gddjk3j/bg-vv.jpg)] bg-cover p-1">
         <Navbar></Navbar>
@@ -46,7 +56,7 @@ const Login = () => {
       
        <center>
             <button
-            
+            onClick={()=>handleGoogleSignIn(location,navigate)}
             className=" text-white text-sm flex my-2 py-2 px-3 items-center justify-center rounded-md  border-[0.1px] border-white"
             >
             <img
