@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 import app from '../Firebase/firebase.config'
-import { createUserWithEmailAndPassword, getAuth , GoogleAuthProvider,  signInWithPopup, updateProfile } from "firebase/auth"
+import { createUserWithEmailAndPassword, getAuth , GoogleAuthProvider, signInWithEmailAndPassword,  signInWithPopup, updateProfile } from "firebase/auth"
 import { useState } from 'react';
 
 export const Context = createContext(null)
@@ -94,12 +94,42 @@ const handleRegister = (e, navigate) => {
   })
 }
 
+// import and create sign in method
+const signIn = (email,password) => {
+
+    return signInWithEmailAndPassword(auth, email, password)
+}
+
+// Handle sign in user
+
+const handleLogin = (e, navigate, location) => {
+    e.preventDefault();
+  
+    const form = new FormData(e.currentTarget);
+    const email = form.get('email');
+    const password = form.get('password');
+  
+    if (email === '' && password === '') {
+      handleGoogleSignIn();
+    } else {
+      signIn(email, password, navigate, location)
+        .then(result => {
+          console.log(result.user);
+
+          navigate(location?.state ? location.state : "/");
+        })
+        .catch(error => {
+          console.error(error.code);
+
+        });
+    }
+  };
+
     const send = {
         handleGoogleSignIn,
         handleRegister,
         registerError,
-      
-
+        handleLogin
     }
 
     return (

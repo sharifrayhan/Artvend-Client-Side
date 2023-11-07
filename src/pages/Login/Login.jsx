@@ -6,9 +6,6 @@ import { Context } from "../../Context/AllContext";
 const Login = () => {
 
   const  {handleGoogleSignIn, handleLogin} = useContext(Context)
-
-console.log(handleGoogleSignIn)
-
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -16,8 +13,8 @@ console.log(handleGoogleSignIn)
     <div className="bg-[url(https://i.ibb.co/gddjk3j/bg-vv.jpg)] bg-cover p-1">
         <Navbar></Navbar>
     <div className="flex flex-col items-center h-screen ">
-     
-     <form  onSubmit={(e) => handleLogin(e, navigate, location)} className="bg-[#ECD6BD] glass shadow-md mt-12 rounded px-8 pt-6 pb-8 mb-4 w-64">
+    <div className="bg-[#ECD6BD] glass shadow-md mt-12 rounded px-8 pt-6 pb-8 mb-4 w-64">
+     <form  onSubmit={(e) => handleLogin(e, navigate, location)} >
        
        <center>
            <h1 className=" my-3 text-[#a55e3f] font-garamond text-2xl uppercase">LOGIN</h1>
@@ -30,6 +27,7 @@ console.log(handleGoogleSignIn)
          <input
            className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#F7F0E8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
            id="email"
+           name="email"
            type="text"
            placeholder="Email"
          />
@@ -41,6 +39,7 @@ console.log(handleGoogleSignIn)
          <input
            className="shadow appearance-none border rounded w-full py-2 px-3 bg-[#F7F0E8]  text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
            id="password"
+           name="password"
            type="password"
            placeholder="Password"
          />
@@ -48,13 +47,14 @@ console.log(handleGoogleSignIn)
        <div className="flex items-center justify-center">
          <button
            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-           type="button"
+           type="submit"
          >
            Sign In
          </button>
        </div>
-      
-       <center>
+     </form>
+
+     <center>
             <button
             onClick={()=>handleGoogleSignIn(location,navigate)}
             className=" text-white text-sm flex my-2 py-2 px-3 items-center justify-center rounded-md  border-[0.1px] border-white"
@@ -66,9 +66,8 @@ console.log(handleGoogleSignIn)
             />
             </button>
         </center>
-      
-      
-       <center>
+
+        <center>
          <p className=" text-black ">
            Dont have an account?{" "}
            <Link className=" text-red-600" to="/Register">
@@ -77,15 +76,7 @@ console.log(handleGoogleSignIn)
          </p>
        </center>
 
- 
-
-     </form>
-     {/* <button
-       className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-       type="button"
-     >
-       Sign in with Google
-     </button> */}
+       </div>
    </div>
     </div>
   );
