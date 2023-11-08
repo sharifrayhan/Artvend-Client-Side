@@ -2,11 +2,18 @@ import { useEffect, useState } from "react";
 import useAxiosSecure from "../../Axios/useAxiosSecure";
 import MyServiceCards from "./MyServiceCards";
 import Navbar from "../Home/Components/Navbar";
+import { useContext } from "react";
+import { Context } from "../../Context/AllContext";
+import Swal from 'sweetalert2'
+import axios from "axios";
 
 
 const MyServices = () => {
 
-    const myEmail = 'sharifrayhannafi@gmail.com'
+    const {user} = useContext(Context)
+    const myEmail = user?.email;
+
+    // const myEmail = 'sharifrayhannafi@gmail.com'
     const [allCards, setAllCards] = useState([])
     const [filteredCards, setFilteredCards] = useState([])
 
@@ -25,9 +32,46 @@ const MyServices = () => {
             card.service_provider_email.includes(myEmail)
         );
         setFilteredCards(filteredCards);
-    }, [allCards]);
+    }, [allCards, myEmail]);
 
     console.log(allCards)
+
+    const handleDeleteItem = async (_id) => {
+        console.log(_id);
+        const result = await Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        });
+    
+        if (result.isConfirmed) {
+            try {
+                const response = await axios.delete(`http://localhost:3000/services/${_id}`, _id,);
+                // const data = response.data;
+    
+                if (response.data.deletedCount > 0) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    );
+    
+                    const thoseremaining = filteredCards?.filter((uItem) => uItem._id !== _id);
+                    setFilteredCards(thoseremaining);
+                } else {
+                    Swal.fire('Failed to Delete!');
+                }
+            } catch (error) {
+                console.error('Error occurred during deletion:', error);
+                Swal.fire('Failed to Delete!', '', 'error');
+            }
+        }
+    };
+    
 
     return (
         <div>
@@ -36,7 +80,7 @@ const MyServices = () => {
             <div className=" flex gap-3 flex-wrap items-center justify-center">
             {
                 filteredCards.map(filteredCard => (
-                    <MyServiceCards key={filteredCard._id} filteredCard={filteredCard}></MyServiceCards>
+                    <MyServiceCards  handleDeleteItem={handleDeleteItem} key={filteredCard._id} filteredCard={filteredCard}></MyServiceCards>
                 ))
             }
             </div>

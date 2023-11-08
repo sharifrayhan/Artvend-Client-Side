@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const MyServiceCards = ({filteredCard}) => {
+const MyServiceCards = ({filteredCard, handleDeleteItem}) => {
     return (
         <div className=" flex flex-col items-center">
         <img className="z-0 h-[300px] rounded-2xl" src={filteredCard?.service_image} alt="" />
@@ -21,6 +21,9 @@ const MyServiceCards = ({filteredCard}) => {
                         <Link to={`/Details/${filteredCard?._id}`}>
                         <button className=" text-[14px] w-8 text-white text-sm flex py-[6px] px-1 items-center justify-center rounded-md  border-[0.1px] border-white"><img className="h-4" src="https://i.ibb.co/8MYwD5Q/right.png" alt="" /></button>
                         </Link>
+                        {/* <Link to={`/Details/${filteredCard?._id}`}> */}
+                        <button onClick={()=>handleDeleteItem(filteredCard?._id)} className=" text-[14px] w-8 text-white text-sm flex py-[6px] px-1 items-center justify-center rounded-md  border-[0.1px] border-white"><img className="h-4" src="https://i.ibb.co/sqNz6jc/delete.png" alt="" /></button>
+                        {/* </Link> */}
                     </div>
             </div>
        </div>
