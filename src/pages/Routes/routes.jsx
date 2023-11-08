@@ -15,6 +15,7 @@ import AboutUs from "../About Us/AboutUs";
 import MySchedules from "../My Schedules/MySchedules";
 import AddService from "../AddService/AddService";
 import UpdateService from "../Update Service/UpdateService";
+import PrivateRoute from "./PrivateRoute";
 
   
   const router = createBrowserRouter([
@@ -49,19 +50,19 @@ import UpdateService from "../Update Service/UpdateService";
         },
         {
           path: "/MyServices",
-          element: <MyServices></MyServices>,
+          element: <PrivateRoute><MyServices></MyServices></PrivateRoute> ,
         },
         {
           path: "/AddServices",
-          element: <AddService></AddService>,
+          element:<PrivateRoute><AddService></AddService></PrivateRoute> ,
         },
         {
           path: "/MySchedules",
-          element: <MySchedules></MySchedules>,
+          element: <PrivateRoute><MySchedules></MySchedules></PrivateRoute>,
         },
         {
           path: "/Details/:id",
-          element: <Details></Details>,
+          element: <PrivateRoute><Details></Details></PrivateRoute> ,
         },
         {
           path: "/AboutUs",
@@ -69,7 +70,7 @@ import UpdateService from "../Update Service/UpdateService";
         },
         {
           path: "/UpdateService/:id",
-          element: <UpdateService></UpdateService>,
+          element:<PrivateRoute><UpdateService></UpdateService></PrivateRoute> ,
         },
       ],
     }, 

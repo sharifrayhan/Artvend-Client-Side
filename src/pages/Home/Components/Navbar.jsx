@@ -28,7 +28,7 @@ const Navbar = () => {
                     <Link to="/" className='hover:text-[#e27f5a]'>Home</Link>
                     <Link to="/services"  className='hover:text-[#e27f5a]'>Services</Link>
 
-                    {/* Dashboard Dropdown */}
+                    {user && (
                     <div className="relative" onClick={toggleDropdown}>
                         <p className="cursor-pointer hover:text-[#e27f5a]">Dashboard</p>
                         {/* Dropdown Content */}
@@ -39,7 +39,7 @@ const Navbar = () => {
                                 <Link to="/MySchedules" className="block px-4 py-2 text-sm hover:bg-[#EF5C2B]">My Schedules</Link>
                             </div>
                         )}
-                    </div>
+                    </div>)}
                 </div>
 
                 {/* Company Logo */}

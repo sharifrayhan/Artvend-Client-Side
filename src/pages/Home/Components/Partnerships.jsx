@@ -1,7 +1,7 @@
 
 
 const Partnerships = () => {
-  // Sample partner logos (replace these with your actual logos)
+
   const partnerLogos = [
     "https://i.ibb.co/b2F8vcp/artio.png",
     "https://i.ibb.co/pvMKLwj/Humo.png",
