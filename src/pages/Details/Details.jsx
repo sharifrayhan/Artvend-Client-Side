@@ -1,11 +1,21 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAxiosSecure from "../../Axios/useAxiosSecure";
+import axios from "axios";
 import Navbar from "../Home/Components/Navbar";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import Swal from 'sweetalert2'
+import { Context } from "../../Context/AllContext";
 
 
 const Details = () => {
+
+    const { user } = useContext(Context)
+
+    // const userName = user?.displayName;
+    const userEmail = user?.email;
+
     const [allCards, setAllCards] = useState([])
     const [filteredCard, setFilteredCard] = useState([])
     const [userCards, setUserCards] = useState([])
@@ -13,6 +23,85 @@ const Details = () => {
     const getId = useParams();
     const { id } = getId;
     console.log(id)
+    // const axiosSecure = useAxiosSecure()
+
+    // const serviceName = filteredCard?.service_name;
+    //  const serviceImage = filteredCard?.service_image;
+
+    
+    const bookingModal = async () => {
+        const { value: formValues, isConfirmed } = await Swal.fire({
+          title: 'Booking Details', 
+          html: `
+          <div class="flex mb-1 flex-col"> 
+          <center>
+            <img id="serviceImage" class="h-[200px] rounded-lg w-[250px]" src="${filteredCard?.service_image}" alt="" />
+          </center>
+          <div class="flex items-center justify-center gap-1">
+            <label for="serviceName" class="font-semibold text-sm mt-2">Service Name :</label>
+            <input id="serviceName" class="swal2-input text-sm" type="text" value="${filteredCard?.service_name}" disabled>
+          </div>
+          <div class="flex items-center justify-center gap-1">
+            <label for="serviceTakingDate" class="font-semibold text-sm mt-2">Service Taking Date :</label>
+            <input id="serviceTakingDate" class="swal2-input text-sm" required type="date">
+          </div>
+          <div class="flex items-center justify-center gap-1">
+            <label for="specialInstructions" class="font-semibold text-sm mt-2">Special Instructions :</label>
+            <input id="specialInstructions" class="swal2-input text-sm" required type="text" placeholder="Special Instructions">
+          </div>
+          <div class="flex items-center justify-center gap-1">
+            <label for="userEmail" class="font-semibold text-sm mt-2">User Email :</label>
+            <input id="userEmail" class="swal2-input text-sm" type="text" value="${userEmail}" disabled>
+          </div>
+          <div class="flex items-center justify-center gap-1">
+            <label for="providerEmail" class="font-semibold text-sm mt-2">Provider Email :</label>
+            <input id="providerEmail" class="swal2-input text-sm" type="text" value="${filteredCard?.service_provider_email}" disabled>
+          </div>
+          <div class="flex items-center justify-center gap-1">
+            <label for="price" class="font-semibold text-sm mt-2">Price :</label>
+            <input id="price" class="swal2-input text-sm" type="text" value="${filteredCard?.service_price}" disabled>
+          </div>
+        </div>`,
+          focusConfirm: false,
+          showCancelButton: true,
+          confirmButtonText: 'Purchase',
+          preConfirm: () => {
+            return {
+              service_image: document.getElementById('serviceImage').src,
+              service_name: document.getElementById('serviceName').value,
+              service_taking_date: document.getElementById('serviceTakingDate').value,
+              special_instructions: document.getElementById('specialInstructions').value,
+              user_email: document.getElementById('userEmail').value,
+              service_provider_email: document.getElementById('providerEmail').value,
+              service_price: document.getElementById('price').value,
+            };
+          },
+        });
+
+        // if (isConfirmed && formValues) {
+        //     console.log(formValues)
+        // }
+
+      
+        if (isConfirmed && formValues) 
+        {
+          try {
+            const url = '/bookings';
+            const response = await axiosSecure.post(url, formValues);
+            if (response.status === 200) {
+              Swal.fire('Success!', 'Booking completed!', 'success');
+            } else {
+              Swal.fire('Error', 'Booking failed', 'error');
+            }
+          } catch (error) {
+            Swal.fire('Error', 'Booking failed', 'error');
+          }
+        } else {
+          Swal.fire('Cancelled', 'No booking made', 'error');
+        }
+      };
+
+
 
     const axiosSecure = useAxiosSecure()
     const url = '/services';
@@ -83,11 +172,16 @@ const Details = () => {
                                 <p className="text-center px-2 italic text-[15px]">{filteredCard?.service_description}</p>
                             </div>
 
-                            <center>
-                                <button className="bg-red-500 my-3  hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
-                                    Book Now
-                                </button>
-                            </center>
+                            {userEmail !== filteredCard?.service_provider_email && (
+                                <center>
+                                    <button
+                                        onClick={bookingModal}
+                                        className="bg-red-500 my-3 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                    >
+                                        Book Now
+                                    </button>
+                                </center>
+                             )}
 
                         </div>
 

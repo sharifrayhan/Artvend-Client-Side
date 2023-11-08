@@ -11,6 +11,9 @@ import ErrorPage401 from "../Errorpage/ErrorPage401";
 import ErrorPage403 from "../Errorpage/ErrorPage403";
 import MyServices from "../My Services/MyServices";
 import Details from "../Details/Details";
+import AboutUs from "../About Us/AboutUs";
+import MySchedules from "../My Schedules/MySchedules";
+import AddService from "../AddService/AddService";
 
   
   const router = createBrowserRouter([
@@ -48,8 +51,20 @@ import Details from "../Details/Details";
           element: <MyServices></MyServices>,
         },
         {
+          path: "/AddServices",
+          element: <AddService></AddService>,
+        },
+        {
+          path: "/MySchedules",
+          element: <MySchedules></MySchedules>,
+        },
+        {
           path: "/Details/:id",
           element: <Details></Details>,
+        },
+        {
+          path: "/AboutUs",
+          element: <AboutUs></AboutUs>,
         },
       ],
     }, 

@@ -226,7 +226,7 @@ const handleLogOut = () => {
     return () =>{
         unSubscribe();
     }
-},[])
+},[user?.email])
 
     const send = {
         handleGoogleSignIn,
