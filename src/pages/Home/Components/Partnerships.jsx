@@ -3,22 +3,21 @@
 const Partnerships = () => {
   // Sample partner logos (replace these with your actual logos)
   const partnerLogos = [
-    "url_to_partner_logo_1.png",
-    "url_to_partner_logo_2.png",
-    "url_to_partner_logo_3.png",
-    "url_to_partner_logo_4.png",
-    "url_to_partner_logo_5.png",
-    "url_to_partner_logo_6.png",
+    "https://i.ibb.co/b2F8vcp/artio.png",
+    "https://i.ibb.co/pvMKLwj/Humo.png",
+    "https://i.ibb.co/FnRBMHF/olio.png",
+    "https://i.ibb.co/3yC8W3g/tora.png",
+    "https://i.ibb.co/nPhGvD2/windy.png",
   ];
 
   return (
-    <section className="bg-gray-200 py-12">
+    <section className=" py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-semibold text-center mb-8 text-gray-800">Our Partnerships</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <center><h2 className=" mb-6 text-[#a55e3f] font-garamond uppercase font-semibold text-3xl">Our Partners</h2></center>
+        <div className="flex justify-between fles-wrap ">
           {partnerLogos.map((logo, index) => (
             <div key={index} className="flex items-center justify-center">
-              <img src={logo} alt={`Partner ${index + 1}`} className="max-h-12 max-w-xs object-contain" />
+              <img src={logo} className="max-h-[100px] max-w-xs object-contain" />
             </div>
           ))}
         </div>

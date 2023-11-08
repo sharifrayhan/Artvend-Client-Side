@@ -61,6 +61,14 @@ const Details = () => {
             <label for="price" class="font-semibold text-sm mt-2">Price :</label>
             <input id="price" class="swal2-input text-sm" type="text" value="${filteredCard?.service_price}" disabled>
           </div>
+          <div class="flex items-center justify-center gap-1">
+                <label for="bookingStatus" class="font-semibold text-sm mt-2">Booking Status:</label>
+                <select id="bookingStatus" class="swal2-input text-sm" disabled>
+                    <option value="pending" selected>Pending</option>
+                    <option value="in progress">In Progress</option>
+                    <option value="completed">Completed</option>
+                </select>
+            </div>
         </div>`,
           focusConfirm: false,
           showCancelButton: true,
@@ -74,6 +82,7 @@ const Details = () => {
               user_email: document.getElementById('userEmail').value,
               service_provider_email: document.getElementById('providerEmail').value,
               service_price: document.getElementById('price').value,
+              booking_status: document.getElementById('bookingStatus').value,
             };
           },
         });

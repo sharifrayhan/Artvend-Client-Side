@@ -1,65 +1,97 @@
-// import { useEffect, useState } from "react";
-// import { useParams } from "react-router-dom";
-// import useAxiosSecure from "../../Axios/useAxiosSecure";
-// import Navbar from "../Home/Components/Navbar";
-// import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
+import useAxiosSecure from "../../Axios/useAxiosSecure";
+import Navbar from "../Home/Components/Navbar";
+import { useContext } from "react";
+import Swal from 'sweetalert2'
+import { Context } from "../../Context/AllContext";
 
 const Booking = () => {
-    // const [allCards, setAllCards] = useState([])
-    // const [filteredCard, setFilteredCard] = useState([])
-    // const getId = useParams();
-    // const { id } = getId;
-    // console.log(id)
+    const [allCards, setAllCards] = useState([]);
+    const [filteredCards, setFilteredCards] = useState([]);
+    const { user } = useContext(Context);
+    const userEmail = user?.email;
+    const axiosSecure = useAxiosSecure();
+    const url = '/bookings';
 
-    // const axiosSecure = useAxiosSecure()
-    // const url = '/services';
+    useEffect(() => {
+        axiosSecure.get(url)
+            .then(res => setAllCards(res.data))
+    }, [url, axiosSecure]);
 
-    // useEffect(()=>{
+    useEffect(() => {
+        const matchedCards = allCards?.filter((card) => card.user_email === userEmail);
+        setFilteredCards(matchedCards);
+    }, [allCards, userEmail]);
 
-    //     axiosSecure.get(url)
-    //     .then(res => setAllCards(res.data))
+
+    const handleDeleteItem = async (_id) => {
+        console.log(_id);
+        const result = await Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        });
     
-    // },[url,axiosSecure])
-
-    // console.log(allCards)
-
-    // useEffect(() => {
-    //     const matchedCard = allCards?.find((card) => card._id == id);
-    //     setFilteredCard(matchedCard);
-    //   }, [id, allCards]);
+        if (result.isConfirmed) {
+            try {
+                const url = `/bookings/${_id}`
+                const response = await axiosSecure.delete(url, _id,);
+                // const data = response.data;
+    
+                if (response.data.deletedCount > 0) {
+                    Swal.fire(
+                        'Deleted!',
+                        'Your file has been deleted.',
+                        'success'
+                    );
+    
+                    const thoseremaining = filteredCards?.filter((uItem) => uItem._id !== _id);
+                    setFilteredCards(thoseremaining);
+                } else {
+                    Swal.fire('Failed to Delete!');
+                }
+            } catch (error) {
+                console.error('Error occurred during deletion:', error);
+                Swal.fire('Failed to Delete!', '', 'error');
+            }
+        }
+    };
 
     return (
         <div>
-            {/* <Navbar></Navbar>
+            <Navbar></Navbar>
+            <center className="mb-6 text-[#a55e3f] font-garamond uppercase font-semibold text-3xl">My Bookings</center>
             <div className="flex items-center justify-center">
-                <div className="flex gap-2">
-
-                        <img className=" h-[270px]" src={filteredCard?.service_image} alt="" />
-
-                        <div className=" p-3 bg-[#D7CBA3] max-w-[530px]">
-                            <div className="mb-1">
-                            <center className=" font-zolina mb-1 font-semibold">{filteredCard?.service_name}</center>
-                            <p className="line-clamp-2 px-2 italic text-[15px]">{filteredCard?.service_description}</p>
+                <div className="flex flex-wrap items-center justify-center gap-4">
+                    {filteredCards.map((filteredCard) => (
+                        <div key={filteredCard?._id} className="bg-gray-100 p-4 rounded-lg">
+                            <img className="w-full h-64 object-cover rounded-lg mb-4" src={filteredCard?.service_image} alt={filteredCard.service_name} />
+                            <h2 className="text-lg font-semibold mb-2">{filteredCard?.service_name}</h2>
+                            <p className="text-sm mb-2">Status: {filteredCard?.booking_status}</p>
+                            <p className="text-sm mb-2">Service Date: {filteredCard?.service_taking_date}</p>
+                            <p className="text-sm mb-2">Special Instructions: {filteredCard?.special_instructions}</p>
+                            <p className="text-sm mb-2">Provider Email: {filteredCard?.service_provider_email}</p>
+                            <p className="text-sm mb-2">Price: {filteredCard?.service_price}</p>
+                       <center>
+            <button
+            onClick={()=>handleDeleteItem(filteredCard?._id)} 
+            className=" text-white text-sm flex my-2 py-2 px-3 items-center justify-center rounded-md  border-[0.1px] border-red-500 my-3  hover:border-red-700"
+            ><h1 className=" mr-1 text-red-500">Remove </h1>
+            <img
+                className="w-4 rounded-full avatar"
+                src="https://i.ibb.co/sqNz6jc/delete.png"
+                alt=""
+            />
+            </button>
+        </center>
                         </div>
-
-                        <div className="px-2 gap-3 flex items-center ">
-                            <div className=" flex items-start gap-2">
-                                <img className="mt-1 h-8 w-8 rounded-full" src={filteredCard?.service_provider_image} alt="" />
-                                <h1 className="line-clamp-2 text-sm">{filteredCard?.service_provider_name}</h1>
-                            </div>
-                            <div className=" w-[100px] gap-1 flex items-center">
-                            
-                                <button className=" text-[14px] text-white text-sm flex py-1 px-2 items-center justify-center rounded-md  border-[0.1px] border-white">{filteredCard?.service_price}</button>
-                                <Link to={`/Details/${filteredCard?._id}`}>
-                                <button className=" text-[14px] w-8 text-white text-sm flex py-[6px] px-1 items-center justify-center rounded-md  border-[0.1px] border-white"><img className="h-4" src="https://i.ibb.co/8MYwD5Q/right.png" alt="" /></button>
-                                </Link>
-                            </div>
-                        </div>
-
-                        </div>
-
+                    ))}
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };

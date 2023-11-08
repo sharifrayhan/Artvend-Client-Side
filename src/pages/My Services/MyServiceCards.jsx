@@ -21,9 +21,12 @@ const MyServiceCards = ({filteredCard, handleDeleteItem}) => {
                         <Link to={`/Details/${filteredCard?._id}`}>
                         <button className=" text-[14px] w-8 text-white text-sm flex py-[6px] px-1 items-center justify-center rounded-md  border-[0.1px] border-white"><img className="h-4" src="https://i.ibb.co/8MYwD5Q/right.png" alt="" /></button>
                         </Link>
-                        {/* <Link to={`/Details/${filteredCard?._id}`}> */}
-                        <button onClick={()=>handleDeleteItem(filteredCard?._id)} className=" text-[14px] w-8 text-white text-sm flex py-[6px] px-1 items-center justify-center rounded-md  border-[0.1px] border-white"><img className="h-4" src="https://i.ibb.co/sqNz6jc/delete.png" alt="" /></button>
-                        {/* </Link> */}
+                    </div>
+                    <div>
+                        <Link to={`/UpdateService/${filteredCard?._id}`}>
+                        <button className="mb-2 text-[14px] w-8 text-white text-sm flex py-[6px] px-1 items-center justify-center rounded-md  border-[0.1px] border-white"><img className="h-4" src="https://i.ibb.co/nDpjYRP/pencil.png" alt="" /></button>
+                        </Link>
+                         <button onClick={()=>handleDeleteItem(filteredCard?._id)} className=" text-[14px] w-8 text-white text-sm flex py-[6px] px-1 items-center justify-center rounded-md  border-[0.1px] border-white"><img className="h-4" src="https://i.ibb.co/sqNz6jc/delete.png" alt="" /></button>
                     </div>
             </div>
        </div>

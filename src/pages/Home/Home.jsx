@@ -6,6 +6,7 @@ import Footer from "./Components/Footer";
 // import Gallery from "./Components/Gallery";
 import Navbar from "./Components/Navbar";
 import Overview from "./Components/Overview";
+import Partnerships from "./Components/Partnerships";
 import TopSellers from "./Components/TopSellers";
 
 
@@ -18,6 +19,7 @@ const Home = () => {
             <Featured></Featured>
             <Overview></Overview>
             <TopSellers></TopSellers>
+            <Partnerships></Partnerships>
             {/* <Gallery></Gallery> */}
             <Footer></Footer>
         </div>

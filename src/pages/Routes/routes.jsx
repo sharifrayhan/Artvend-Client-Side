@@ -14,6 +14,7 @@ import Details from "../Details/Details";
 import AboutUs from "../About Us/AboutUs";
 import MySchedules from "../My Schedules/MySchedules";
 import AddService from "../AddService/AddService";
+import UpdateService from "../Update Service/UpdateService";
 
   
   const router = createBrowserRouter([
@@ -65,6 +66,10 @@ import AddService from "../AddService/AddService";
         {
           path: "/AboutUs",
           element: <AboutUs></AboutUs>,
+        },
+        {
+          path: "/UpdateService/:id",
+          element: <UpdateService></UpdateService>,
         },
       ],
     }, 
