@@ -236,7 +236,8 @@ const handleLogOut = () => {
         logOut,
         handleLogOut,
         user,
-        termsError
+        termsError,
+        loading
     }
 
     return (

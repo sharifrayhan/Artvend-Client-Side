@@ -3,7 +3,7 @@ export default {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
-    'node_modules/preline/dist/*.js',
+  
      ],
 
   theme: {
@@ -21,7 +21,7 @@ export default {
     //   'xl': '1280px',  
     // },
   },
-  plugins: [require('preline/plugin'),
+  plugins: [require("daisyui")
 ],
 }
 

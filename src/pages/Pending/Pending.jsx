@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import useAxiosSecure from "../../Axios/useAxiosSecure";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useContext } from "react";
 import Swal from 'sweetalert2';
 import { Context } from "../../Context/AllContext";
@@ -44,7 +44,7 @@ const Pending = () => {
 
                     if (response.status === 200) {
                         Swal.fire('Success!', 'Booking status updated!', 'success');
-                        // You might want to update the UI here if needed
+                 
                     } else {
                         Swal.fire('Error', 'Failed to update booking status', 'error');
                     }

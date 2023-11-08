@@ -3,6 +3,7 @@ import Navbar from "../Home/Components/Navbar";
 import { Context } from "../../Context/AllContext";
 import useAxiosSecure from "../../Axios/useAxiosSecure";
 import Swal from 'sweetalert2'
+import {Helmet} from "react-helmet";
 
 
 const AddService = () => {
@@ -55,6 +56,11 @@ const AddService = () => {
     return (
         <div className="bg-[url(https://i.ibb.co/gddjk3j/bg-vv.jpg)] bg-no-repeat p-1">
         <Navbar></Navbar>
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>Artvend | Add Service</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <div className=" ">
           <div className="min-w-[100px] mx-2 md:mx-10 lg:mx-24 mt-5 mb-10">
             <div className="w-full max-w-md mx-auto">

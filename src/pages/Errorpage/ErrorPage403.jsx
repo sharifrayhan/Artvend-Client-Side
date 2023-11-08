@@ -1,8 +1,14 @@
 import { Link } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 const ErrorPage403 = () => {
     return (
       <div className=" h-screen flex flex-col items-center gap-3">
+                <Helmet>
+                <meta charSet="utf-8" />
+                <title>Error</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
         <img 
           className=" h-[500px] "
           src="https://i.ibb.co/Dz3mtvH/403-forbidden.png"

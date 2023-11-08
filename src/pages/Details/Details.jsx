@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import useAxiosSecure from "../../Axios/useAxiosSecure";
-import axios from "axios";
+// import axios from "axios";
 import Navbar from "../Home/Components/Navbar";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import Swal from 'sweetalert2'
 import { Context } from "../../Context/AllContext";
 
-
+import {Helmet} from "react-helmet";
 const Details = () => {
 
     const { user } = useContext(Context)
@@ -155,6 +155,11 @@ const Details = () => {
         <div>
             <Navbar></Navbar>
             <div className="flex items-center justify-center">
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Artvend | Details</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
                 <div className="flex flex-col min-h-screen gap-2">
 
                         <img className=" h-[300px] md:h-[500px] lg:h-[500px] rounded-tr-[70px] rounded-tl-[5px] rounded-b-[5px]" src={filteredCard?.service_image} alt="" />

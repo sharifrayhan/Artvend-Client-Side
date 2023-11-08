@@ -74,7 +74,7 @@ const Booking = () => {
                             <p className="text-sm mb-2">Status: {filteredCard?.booking_status}</p>
                             <p className="text-sm mb-2">Service Date: {filteredCard?.service_taking_date}</p>
                             <p className="text-sm mb-2">Special Instructions: {filteredCard?.special_instructions}</p>
-                            <p className="text-sm mb-2">Provider Email: {filteredCard?.service_provider_email}</p>
+                            <p className="text-sm mb-2">Provider Name: {filteredCard?.service_provider_name}</p>
                             <p className="text-sm mb-2">Price: {filteredCard?.service_price}</p>
                        <center>
             <button

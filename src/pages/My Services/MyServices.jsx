@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { Context } from "../../Context/AllContext";
 import Swal from 'sweetalert2'
 import axios from "axios";
-
+import {Helmet} from "react-helmet";
 
 const MyServices = () => {
 
@@ -76,6 +76,11 @@ const MyServices = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Artvend | My Services</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <center className=" my-3 text-[#a55e3f] font-garamond text-2xl uppercase">My Services</center>
             <div className=" flex gap-3 flex-wrap items-center justify-center">
             {

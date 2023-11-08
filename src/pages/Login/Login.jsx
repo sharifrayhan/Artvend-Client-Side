@@ -2,6 +2,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../Home/Components/Navbar";
 import { useContext } from "react";
 import { Context } from "../../Context/AllContext";
+import {Helmet} from "react-helmet";
 
 const Login = () => {
 
@@ -12,6 +13,11 @@ const Login = () => {
   return (
     <div className="bg-[url(https://i.ibb.co/gddjk3j/bg-vv.jpg)] bg-cover p-1">
         <Navbar></Navbar>
+        <Helmet>
+                <meta charSet="utf-8" />
+                <title>Artvend | My Login</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
     <div className="flex flex-col items-center h-screen ">
     <div className="bg-[#ECD6BD] glass shadow-md mt-12 rounded px-8 pt-6 pb-8 mb-4 w-64">
      <form  onSubmit={(e) => handleLogin(e, location, navigate)} >

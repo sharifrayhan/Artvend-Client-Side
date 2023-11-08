@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import useAxiosSecure from "../../Axios/useAxiosSecure";
 import ServiceCards from "./ServiceCards";
 import Navbar from "../Home/Components/Navbar";
+import {Helmet} from "react-helmet";
+
 
 const Services = () => {
 
@@ -37,6 +39,11 @@ const Services = () => {
     return (
         <div>
             <Navbar></Navbar>
+            <Helmet>
+                <meta charSet="utf-8" />
+                <title>Artvend | Services</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <center className=" my-3 text-[#a55e3f] font-garamond text-2xl ">ALL SERVICES</center>
 
             {/* Search field */}

@@ -10,7 +10,7 @@ const PrivateRoute = ({children}) => {
 
     if (loading){
 
-        return <center><img className=' h-screen w-screen' src="https://i.ibb.co/1fKG6Yb/loading.gif" alt="" /></center>
+        return <center className=' mt-60'><span className="loading loading-ball loading-lg"></span></center>
     
     }
 
@@ -19,7 +19,7 @@ const PrivateRoute = ({children}) => {
         return children
 
     }
-
+    
     else{
 
         return <Navigate state={location.pathname} to={"/Login"}></Navigate>

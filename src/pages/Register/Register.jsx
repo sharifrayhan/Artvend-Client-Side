@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import Navbar from '../Home/Components/Navbar';
 import { useContext } from 'react';
 import { Context } from '../../Context/AllContext';
+import {Helmet} from "react-helmet";
 
 const Register = () => {
 
@@ -12,6 +13,11 @@ const Register = () => {
   return (
     <div className="bg-[url(https://i.ibb.co/gddjk3j/bg-vv.jpg)] bg-cover p-1">
       <Navbar></Navbar>
+      <Helmet>
+                <meta charSet="utf-8" />
+                <title>Artvend | My Register</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
       <div className="flex flex-col items-center h-screen">
       <div className="bg-[#ECD6BD] glass shadow-md mt-12 rounded px-8 pt-6 pb-8 mb-4">
         <center className=" my-3 text-[#a55e3f] font-garamond text-2xl uppercase">Register</center>

@@ -8,12 +8,17 @@ import Navbar from "./Components/Navbar";
 import Overview from "./Components/Overview";
 import Partnerships from "./Components/Partnerships";
 import TopSellers from "./Components/TopSellers";
+import {Helmet} from "react-helmet";
 
 
 const Home = () => {
     return (
         <div className=" max-w-8xl">
-     
+                        <Helmet>
+                <meta charSet="utf-8" />
+                <title>Artvend | Home</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+            </Helmet>
             <Navbar></Navbar>
             <Banner></Banner>
             <Featured></Featured>
