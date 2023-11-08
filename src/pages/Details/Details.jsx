@@ -166,7 +166,6 @@ const Details = () => {
                                 </div> */}
                             </div>
                             
-                            
                             <div className="">
                                 <center className=" text-[20px] font-garamond mb-1 font-semibold">{filteredCard?.service_name}</center>
                                 <p className="text-center px-2 italic text-[15px]">{filteredCard?.service_description}</p>
