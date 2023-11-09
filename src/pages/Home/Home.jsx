@@ -1,5 +1,6 @@
 
 
+import Contact from "../Contact/Contact";
 import Banner from "./Components/Banner";
 import Featured from "./Components/Featured";
 import Footer from "./Components/Footer";
@@ -26,6 +27,7 @@ const Home = () => {
             <TopSellers></TopSellers>
             <Partnerships></Partnerships>
             {/* <Gallery></Gallery> */}
+            <Contact></Contact>
             <Footer></Footer>
         </div>
     );
