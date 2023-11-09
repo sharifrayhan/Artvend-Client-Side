@@ -206,18 +206,18 @@ const handleLogOut = () => {
         const userEmail = currentUser?.email || user?.email;
         setUser(currentUser)
         setLoading(false)
-        // const url = 'http://localhost:3000/jwt'
+        // const url = 'https://artvend-server.vercel.app/jwt'
         if(currentUser){
             const loggeduserinfo = {email: userEmail}
             // console.log(loggeduserinfo)
-            axios.post('http://localhost:3000/jwt',loggeduserinfo,{withCredentials: true})
+            axios.post('https://artvend-server.vercel.app/jwt',loggeduserinfo,{withCredentials: true})
             .then(res=>{
                 console.log(res.data)
             })
         }
         else{
             const loggeduserinfo = {email: userEmail}
-            axios.post('http://localhost:3000/logout',loggeduserinfo,{withCredentials: true} )
+            axios.post('https://artvend-server.vercel.app/logout',loggeduserinfo,{withCredentials: true} )
             .then(res=>{
                 console.log(res.data)
             })
