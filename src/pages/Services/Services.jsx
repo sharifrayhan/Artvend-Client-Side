@@ -34,7 +34,7 @@ const Services = () => {
     
     },[url,axiosSecure])
 
-    console.log(collections)
+    // console.log(collections)
 
     return (
         <div>

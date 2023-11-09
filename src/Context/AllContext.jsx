@@ -10,7 +10,7 @@ import axios from "axios";
 
 export const Context = createContext(null)
 const auth = getAuth(app)
-console.log(auth)
+// console.log(auth)
 
 const AllContext = ({children}) => {
 
@@ -202,14 +202,14 @@ const handleLogOut = () => {
   
  useEffect(()=>{
     const unSubscribe = onAuthStateChanged(auth, currentUser=>{
-        console.log(' on auth state activity', currentUser);
+        // console.log(' on auth state activity', currentUser);
         const userEmail = currentUser?.email || user?.email;
         setUser(currentUser)
         setLoading(false)
         // const url = 'http://localhost:3000/jwt'
         if(currentUser){
             const loggeduserinfo = {email: userEmail}
-            console.log(loggeduserinfo)
+            // console.log(loggeduserinfo)
             axios.post('http://localhost:3000/jwt',loggeduserinfo,{withCredentials: true})
             .then(res=>{
                 console.log(res.data)

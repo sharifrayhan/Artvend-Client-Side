@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 
 const Overview = () => {
@@ -6,7 +6,7 @@ const Overview = () => {
         <div className=" py-12">
             <div className="container mx-auto flex flex-col-reverse md:flex-col-reverse lg:flex-row items-center justify-between">
                 <div className="w-full md:w-1/2 lg:w-1/2 px-6">
-                    <h1 className="text-4xl mb-6 text-[#a55e3f] font-garamond  font-bold">Discover Your Ideal Artisan at Artvend: Where Creativity Meets Skill</h1>
+                <motion.div whileHover={{ scale: 1.1 }}><h1 className="text-4xl mb-6 text-[#a55e3f] font-garamond  font-bold">Discover Your Ideal Artisan at Artvend: Where Creativity Meets Skill</h1></motion.div>
                     <p className="text-lg mb-6">Find the Perfect Artist for Your Vision - Collaborate with Talented Individuals for T-Shirt Paintings, Wall Art, Embroidery Art, Bottle Art, Patches, and More!</p>
 
                     <div className="grid grid-cols-2 gap-6">

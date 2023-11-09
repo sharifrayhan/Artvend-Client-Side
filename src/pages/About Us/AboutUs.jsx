@@ -22,12 +22,12 @@ const AboutUs = () => {
           For Artists: Artvend offers a supportive environment for creators to exhibit their portfolios, manage bookings, and connect with a community that appreciates their distinctive craftsmanship.
         </p>
         <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-          For Clients: Our platform is designed for those seeking bespoke t-shirts, embroidery, woodworking, photography, candles, or stone art. At Artvend, you'll discover and book the perfect artist for your needs.
+          For Clients: Our platform is designed for those seeking bespoke t-shirts, embroidery, woodworking, photography, candles, or stone art. At Artvend, you will discover and book the perfect artist for your needs.
         </p>
 
         <h2 className="text-3xl font-semibold mb-4  font-garamond text-gray-800">Join Our Creative Community</h2>
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-          Whether you're an artist looking to showcase your creations or an art enthusiast passionate about supporting unique craftsmanship, we invite you to join our vibrant community.
+          Whether you are an artist looking to showcase your creations or an art enthusiast passionate about supporting unique craftsmanship, we invite you to join our vibrant community.
         </p>
 
         <p className="text-lg text-gray-700 mb-6 leading-relaxed">

@@ -7,7 +7,7 @@ const Contact = () => {
     <section className="flex flex-col md:flex-row justify-center items-center md:justify-between p-4">
       <div className="w-full md:w-1/2 md:mr-2">
         <div className=" rounded-lg p-4">
-          <h2 className=" mb-6 text-[#a55e3f] font-garamond uppercase font-semibold text-3xl">Contact Us</h2>
+        <motion.div whileHover={{ scale: 1.1 }}> <h2 className=" mb-6 text-[#a55e3f] font-garamond uppercase font-semibold text-3xl">Contact Us</h2>   </motion.div>
           <p>Reach out to us for any queries or feedback!</p>
           <div className="mt-4">
             <motion.div whileHover={{ scale: 1.1 }}>

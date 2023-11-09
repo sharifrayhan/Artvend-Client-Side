@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 
 const TopSellers = () => {
 
@@ -27,7 +27,7 @@ const TopSellers = () => {
   return (
     <section className="py-12 ">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl font-semibold font-garamond text-center mb-8 text-[#a55e3f] uppercase">Artists of The Month</h2>
+      <motion.div whileHover={{ scale: 1.1 }}><h2 className="text-3xl font-semibold font-garamond text-center mb-8 text-[#a55e3f] uppercase">Artists of The Month</h2>      </motion.div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {topSellersData.map((seller) => (
             <div key={seller.id} className="bg-[#D7CBA3] rounded-lg flex flex-grow flex-col  shadow-md">

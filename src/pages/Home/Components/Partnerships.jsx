@@ -1,4 +1,4 @@
-
+import { motion } from 'framer-motion';
 
 const Partnerships = () => {
 
@@ -13,11 +13,11 @@ const Partnerships = () => {
   return (
     <section className=" py-12">
       <div className="max-w-6xl mx-auto px-4">
-        <center><h2 className=" mb-6 text-[#a55e3f] font-garamond uppercase font-semibold text-3xl">Our Partners</h2></center>
+      <motion.div whileHover={{ scale: 1.1 }}> <center><h2 className=" mb-6 text-[#a55e3f] font-garamond uppercase font-semibold text-3xl">Our Partners</h2></center> </motion.div >
         <div className="flex justify-between p-6 flex-wrap ">
           {partnerLogos.map((logo, index) => (
             <div key={index} className="flex items-center justify-center">
-              <img src={logo} className="h-[30px] md:h-[50px] lg:h-[100px] max-w-xs object-contain" />
+               <motion.div whileHover={{ scale: 1.1 }}><img src={logo} className="h-[30px] md:h-[50px] lg:h-[100px] max-w-xs object-contain" /></motion.div>
             </div>
           ))}
         </div>

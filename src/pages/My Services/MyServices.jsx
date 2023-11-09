@@ -5,7 +5,7 @@ import Navbar from "../Home/Components/Navbar";
 import { useContext } from "react";
 import { Context } from "../../Context/AllContext";
 import Swal from 'sweetalert2'
-import axios from "axios";
+// import axios from "axios";
 import {Helmet} from "react-helmet";
 
 const MyServices = () => {
@@ -34,7 +34,7 @@ const MyServices = () => {
         setFilteredCards(filteredCards);
     }, [allCards, myEmail]);
 
-    console.log(allCards)
+    // console.log(allCards)
 
     const handleDeleteItem = async (_id) => {
         console.log(_id);

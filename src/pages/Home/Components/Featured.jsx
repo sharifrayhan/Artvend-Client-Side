@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import useAxiosSecure from "../../../Axios/useAxiosSecure";
 import FeaturedCard from "./FeaturedCard";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 
 
 
@@ -40,11 +41,11 @@ const Featured = () => {
 
     return (
         <div className=" ">
-            
+              <motion.div whileHover={{ scale: 1.1 }}>
             <center>
                 <h1 className=" mb-6 text-[#a55e3f] font-garamond uppercase font-semibold text-3xl">Popular Services</h1>
             </center>
-
+            </motion.div>
             <div className="flex flex-wrap gap-3 items-center justify-center">
             {
             filteredCollections.map(collection => (

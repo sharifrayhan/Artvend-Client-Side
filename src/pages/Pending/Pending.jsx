@@ -18,7 +18,7 @@ const Pending = () => {
             .then(res => setAllCards(res.data))
     }, [url, axiosSecure]);
 
-    console.log(allCards)
+    // console.log(allCards)
 
     useEffect(() => {
         const matchedCards = allCards?.filter((card) => card.service_provider_email === userEmail);

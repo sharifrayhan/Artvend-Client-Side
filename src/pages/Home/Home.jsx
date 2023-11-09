@@ -1,10 +1,8 @@
 
-
 import Contact from "../Contact/Contact";
 import Banner from "./Components/Banner";
 import Featured from "./Components/Featured";
 import Footer from "./Components/Footer";
-// import Gallery from "./Components/Gallery";
 import Navbar from "./Components/Navbar";
 import Overview from "./Components/Overview";
 import Partnerships from "./Components/Partnerships";
@@ -26,7 +24,6 @@ const Home = () => {
             <Overview></Overview>
             <TopSellers></TopSellers>
             <Partnerships></Partnerships>
-            {/* <Gallery></Gallery> */}
             <Contact></Contact>
             <Footer></Footer>
         </div>
