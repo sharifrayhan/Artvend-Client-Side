@@ -66,7 +66,8 @@ const UpdateService = () => {
             service_provider_email
         };
         try {
-            const url = `/services/${filteredCard?._id}`;
+            const id = filteredCard?._id;
+            const url = `/services/${id}?email=${userEmail}`;
             const response = await axiosSecure.put(url, updatedService);
             if (response.status === 200) {
                 Swal.fire('Success!', 'Service updated!', 'success');

@@ -4,9 +4,9 @@ const ServiceCards = ({collection}) => {
     return (
     <div className=" flex flex-col items-center">
             <img className="z-0 h-[300px] rounded-2xl" src={collection?.service_image} alt="" />
-           <div className=" pt-3 px-3 pb-4 bg-[#D7CBA3] flex flex-col justify-between w-[270px] min-h-[180px] rounded-2xl -mt-16 z-10 sticky">
+           <div className=" pt-3 px-3 pb-4 bg-[#D7CBA3] flex flex-col justify-between w-[270px] min-h-[210px] rounded-2xl -mt-16 z-10 sticky">
                 <div className="mb-1">
-                    <center className=" text-[20px] font-garamond mb-1 font-semibold">{collection?.service_name}</center>
+                    <center className=" text-[20px] px-3 font-garamond mb-1 font-semibold">{collection?.service_name}</center>
                     <center className=" text-sm">{collection?.service_location_area}</center>
                     <p className="line-clamp-2 px-2 italic mt-2 text-center text-[14px]">{collection?.service_description}</p>
                 </div>

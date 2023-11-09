@@ -64,9 +64,9 @@ const Details = () => {
           <div class="flex items-center justify-center gap-1">
                 <label for="bookingStatus" class="font-semibold text-sm mt-2">Booking Status:</label>
                 <select id="bookingStatus" class="swal2-input text-sm" disabled>
-                    <option value="pending" selected>Pending</option>
-                    <option value="in progress">In Progress</option>
-                    <option value="completed">Completed</option>
+                    <option value="Pending" selected>Pending</option>
+                    <option value="In Progress">In Progress</option>
+                    <option value="Completed">Completed</option>
                 </select>
             </div>
         </div>`,
@@ -152,7 +152,7 @@ const Details = () => {
 
 
     return (
-        <div>
+        <div className="mb-7">
             <Navbar></Navbar>
             <div className="flex items-center justify-center">
             <Helmet>

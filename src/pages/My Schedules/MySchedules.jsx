@@ -4,7 +4,7 @@ import {Helmet} from "react-helmet";
 
 const MySchedules = () => {
     return (
-        <div>
+        <div className="mb-7">
             <Helmet>
                 <meta charSet="utf-8" />
                 <title>Artvend | My Schedules</title>

@@ -38,6 +38,7 @@ const MyServices = () => {
 
     const handleDeleteItem = async (_id) => {
         console.log(_id);
+        const id = _id;
         const result = await Swal.fire({
             title: 'Are you sure?',
             text: "You won't be able to revert this!",
@@ -50,7 +51,8 @@ const MyServices = () => {
     
         if (result.isConfirmed) {
             try {
-                const response = await axios.delete(`http://localhost:3000/services/${_id}`, _id,);
+                const uurl =`/services/${id}?email=${myEmail}`
+                const response = await axiosSecure.delete(uurl, _id,);
                 // const data = response.data;
     
                 if (response.data.deletedCount > 0) {
@@ -71,7 +73,6 @@ const MyServices = () => {
             }
         }
     };
-    
 
     return (
         <div>
@@ -88,6 +89,11 @@ const MyServices = () => {
                     <MyServiceCards  handleDeleteItem={handleDeleteItem} key={filteredCard._id} filteredCard={filteredCard}></MyServiceCards>
                 ))
             }
+             {
+                    filteredCards?.length == 0 && (
+                        <center className="my-6">You have no services available</center>
+                    )
+                }
             </div>
         </div>
     );

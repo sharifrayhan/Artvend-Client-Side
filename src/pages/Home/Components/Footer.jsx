@@ -9,7 +9,7 @@ const Footer = () => {
             <a href="#" className="text-gray-300 text-sm lg:text-base hover:text-gray-400">Home</a>
             <a href="/AboutUs" className="text-gray-300 text-sm lg:text-base hover:text-gray-400">About Us</a>
             <a href="/Services" className="text-gray-300 text-sm lg:text-base hover:text-gray-400">Services</a>
-            <a href="/Contact" className="text-gray-300 text-sm lg:text-base hover:text-gray-400">Contact</a>
+            <a href="#" className="text-gray-300 text-sm lg:text-base hover:text-gray-400">Contact</a>
           </div>
           <div className="flex flex-wrap items-center space-x-4">
             <a href="#" ><img className="h-5" src="https://i.ibb.co/NKgBCQP/fb-white.png" alt="" /></a>
@@ -21,6 +21,7 @@ const Footer = () => {
           <div className="container mx-auto py-2 text-center text-gray-400 text-sm">
             <p>&copy; 2023 Artvend. All rights reserved.</p>
             <p>Terms of Service | Privacy Policy</p>
+            <p>Contact : Email : artvend@gmail.com, Phone : 01711188899</p>
           </div>
         </div>
       </footer>
