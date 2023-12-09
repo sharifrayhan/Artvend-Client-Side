@@ -1,4 +1,4 @@
-# Artvend: Empowering Artists through a Freelancing Platform
+#### Artvend: Empowering Artists through a Freelancing Platform
 Overview
 Welcome to Artvend, a dynamic freelancing platform tailored for artists of all kinds to showcase their talents and connect with clients seeking unique artistic services.
 
