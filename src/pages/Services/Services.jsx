@@ -3,6 +3,7 @@ import useAxiosSecure from "../../Axios/useAxiosSecure";
 import ServiceCards from "./ServiceCards";
 import Navbar from "../Home/Components/Navbar";
 import {Helmet} from "react-helmet";
+import VoiceSearch from "./VoiceSearch";
 
 
 const Services = () => {
@@ -47,7 +48,8 @@ const Services = () => {
             <center className=" my-3 text-[#a55e3f] font-garamond text-2xl ">ALL SERVICES</center>
 
             {/* Search field */}
-            <div className="max-w-xs mx-auto">
+            <div className="flex items-center gap-0">
+            <div className="max-w-xs flex items-center gap-2 mx-auto">
                 <div className="relative text-gray-600 focus-within:text-gray-400">
                     <span className="absolute inset-y-0 left-0 flex items-center pl-2">
                         <button type="submit" className="p-1 focus:outline-none focus:shadow-outline">
@@ -55,6 +57,7 @@ const Services = () => {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 20l-5-5m2.5-6.5a7.5 7.5 0 11-15 0 7.5 7.5 0 0115 0z"/>
                             </svg>
                         </button>
+                       
                     </span>
                     <input
                         className="w-full py-2 pl-10 text-sm text-gray-700 bg-white border border-gray-200 rounded-md focus:outline-none focus:border-gray-400 focus:bg-white"
@@ -64,6 +67,9 @@ const Services = () => {
                         onChange={(e) => setSearchCategory(e.target.value)}
                     />
                 </div>
+                <VoiceSearch setSearchCategory={setSearchCategory} />
+            </div>
+           
             </div>
 
             {/*All Cards */}
