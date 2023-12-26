@@ -36,7 +36,7 @@ Artvend is powered by cutting-edge technologies, offering a seamless and respons
 ## Explore Artvend
 Curious to see Artvend in action? Visit the live site at [Artvend](https://artvend-client-sharifrayhan.netlify.app/) and discover a world where creativity meets functionality. 🎨✨
 
-## Getting Started
+## How To Run Locally?
 
 After cloning the repository 
 1. **Install project dependencies:**
