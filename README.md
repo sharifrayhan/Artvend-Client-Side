@@ -32,5 +32,19 @@ Artvend is powered by cutting-edge technologies, offering a seamless and respons
 
 - **JSON Web Token:** JWT integration enhances the security of Artvend, providing a reliable mechanism for user authentication.
 
+## Getting Started
+
+After cloning the repository 
+1. **Install project dependencies:**
+
+   ```bash
+   npm install
+
+## Running the Project
+Start the development server and go to your local server from browser:
+   ```bash
+   npm run dev
+
+
 ## Explore Artvend
 Curious to see Artvend in action? Visit the live site at [Artvend](https://artvend-client-sharifrayhan.netlify.app/) and discover a world where creativity meets functionality. 🎨✨
